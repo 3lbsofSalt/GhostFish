@@ -14,6 +14,7 @@ extends Node2D
 @onready var roomSceneDivideUpRight = preload("res://scenes/ship_divide_up_right.tscn");
 @onready var roomSceneDivideDownRight = preload("res://scenes/ship_divide_down_right.tscn");
 @onready var roomSceneBoss = preload("res://scenes/boss_room.tscn");
+@onready var roomScenePearl = preload("res://scenes/pearl_room.tscn");
 
 # ROOM CODES:
 # 0 = empty room
@@ -24,21 +25,18 @@ extends Node2D
 # 5 = divide up right
 # 6 = divide down right
 # 7 = boss
+# 8 = pearl room
 
 func _ready() -> void:
 	var roomList = [1, 1, 2, 2, 3, 3, 4,
 					4, 5, 5, 6, 6, 1, 1,
 					3, 2, 2, 2, 2, 1, 1,
-					3, 0, 0, 0, 0, 0, 0,
+					3, 0, 0, 0, 8, 8, 8,
 					3, 0, 0, 6, 6, 6, 6,
 					3, 0, 0, 7, 0, 0, 5,
 					4, 4, 4, 4, 5, 5, 5]
 	roomList.shuffle()
 	print(roomList)
-	
-	#var bleh = convertTwoDimsToOne(0, 0)
-	#print(bleh)
-	#var testRoom = getRoomFromIndex(bleh)
 	
 	for row in range(SHIP_DIMENSION):
 		for col in range(SHIP_DIMENSION):
@@ -81,4 +79,6 @@ func getRoomFromIndex(roomIndexToAdd):
 			roomToReturn = roomSceneDivideDownRight
 		7:
 			roomToReturn = roomSceneBoss
+		8:
+			roomToReturn = roomScenePearl
 	return roomToReturn;
