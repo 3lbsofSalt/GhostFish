@@ -8,7 +8,8 @@ func _ready():
 	# setup the python env if it doesnt exist
 	#python_process_id = OS.execute("./setup.sh", [""])
 	# Run the Python script
-	if OS.get_name() == 'X11':
+	print(OS.get_name())
+	if OS.get_name() == 'X11' or OS.get_name() == 'Linux':
 		python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
 	else:
 		python_process_id = OS.execute("env\\Scripts\\python.exe", ["mouth_detection.py"])
@@ -26,10 +27,8 @@ func _ready():
 func _process(delta):
 	# Read the mouth state from the file
 	var file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
-	print(file)
 	if file:
 		var mouth_state = file.get_as_text()
-		print(mouth_state)
 		file.close()
 
 		# Example: Use mouth state in the game

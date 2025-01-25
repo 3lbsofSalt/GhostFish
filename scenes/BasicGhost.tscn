@@ -17,17 +17,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="BasicGhost" type="Node2D" groups=["BasicGhost"]]
+[node name="Area2D" type="Area2D" groups=["Ghost"]]
 script = ExtResource("1_3dhjh")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Ghost"]]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_tx3y7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Ghost"]]
 scale = Vector2(0.0180556, 0.0180556)
 sprite_frames = SubResource("SpriteFrames_i4r4u")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_collide"]
+[connection signal="body_entered" from="." to="." method="_on_collide"]

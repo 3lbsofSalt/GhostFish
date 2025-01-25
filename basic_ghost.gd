@@ -17,6 +17,7 @@ func die() -> void:
 	queue_free();
 
 func take_damage() -> void:
+	print('airesonteioarsnt');
 	die();
 
 
@@ -28,9 +29,6 @@ func _process(delta: float) -> void:
 
 
 func _on_collide(body: Node2D) -> void:
-	print('aireostnoaiersnt');
+	print('arst')
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
 		body.take_damage();
-	else:
-		print(body.is_in_group('Fish'))
-		print(body.has_method('take_damage'))
