@@ -15,6 +15,8 @@ seamless = true
 noise = SubResource("FastNoiseLite_a2t0p")
 
 [node name="Fog" type="Sprite2D"]
+z_index = 4
+z_as_relative = false
 material = SubResource("ShaderMaterial_1w3k2")
 position = Vector2(3456, 3888)
 texture = SubResource("NoiseTexture2D_vpifj")

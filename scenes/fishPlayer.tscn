@@ -64,7 +64,7 @@ script = ExtResource("1_ddrnt")
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rnjlx")
 animation = &"run"
-frame_progress = 0.113171
+frame_progress = 0.438554
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2, 1.2)
