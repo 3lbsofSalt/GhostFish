@@ -2,6 +2,7 @@ extends Node
 
 var python_process_id = null
 var mouth_state_file_path = "res://mouth_open.txt"  # Adjust path if needed
+var mouth_open = null;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# setup the python env if it doesnt exist
@@ -33,9 +34,9 @@ func _process(delta):
 
 		# Example: Use mouth state in the game
 		if mouth_state == "yes":
-			print("Mouth is open")
+			mouth_open = true;
 		elif mouth_state == "no":
-			print("Mouth is closed")
+			mouth_open = false;
 
 func _exit_tree():
 	if python_process_id != null:
