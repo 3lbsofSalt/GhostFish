@@ -95,11 +95,12 @@ position = Vector2(-58, 605)
 position = Vector2(-58, 711)
 
 [node name="Label2" type="Label" parent="Camera"]
+z_index = 999
 offset_left = 774.0
-offset_top = 21.0
+offset_top = 14.0
 offset_right = 1111.0
-offset_bottom = 158.0
-scale = Vector2(0.373387, 0.230772)
+offset_bottom = 151.0
+scale = Vector2(0.375634, 0.3049)
 theme_override_font_sizes/font_size = 100
 text = "health:"
 
