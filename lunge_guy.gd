@@ -33,7 +33,8 @@ func is_alive() -> bool:
 
 func die() -> void:
 	if GameState.is_running():
-		GameState.score += 100;
+		GameState.score += 1000;
+		GameState.boss_defeated = true;
 	alive = false;	
 	queue_free();
 

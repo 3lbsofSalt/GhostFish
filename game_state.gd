@@ -4,6 +4,7 @@ var score = 0.0;
 var pearls_collected = 0;
 var enemy_speed_mean = 300;
 var enemy_speed_std = 100;
+var boss_defeated = false;
 var spawn_rate: float = 50;
 
 func enemies_should_spawn() -> bool:
@@ -19,7 +20,7 @@ func is_running() -> bool:
 		if player.has_method('is_alive') and player.is_alive():
 			players_alive = players_alive + 1;
 	
-	if score > 1000:
+	if boss_defeated:
 		get_tree().change_scene_to_file("res://scenes/you_won.tscn")
 		return false
 		
