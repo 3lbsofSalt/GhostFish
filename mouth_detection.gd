@@ -7,9 +7,8 @@ var mouth_open = null;
 func _ready():
 	# Run the Python script
 	
-	if FileAccess.file_exists('res://env'):
-		print("please run the setup.sh file before playing the game")
-		get_tree().quit()
+	print("please run the setup.sh file before playing the game otherwise mouth\
+	functionality will not work")
 	
 	python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
 	print("Python script started with process ID: ", python_process_id)
