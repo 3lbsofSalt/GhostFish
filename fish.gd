@@ -12,9 +12,14 @@ extends CharacterBody2D;
 @onready var bubble: AnimatedSprite2D = %Bubble;
 @onready var bubbleArea: Area2D = %BubbleArea;
 
+signal bubblePopSig();
+signal bubbleGrowSig();
+
 var alive = true;
 var blowing_bubble = false;
 var bubble_size = 100;
+
+var bubbleGrowSoundPlaying = false;
 
 func get_input():
 	if not GameState.is_running():
@@ -25,12 +30,17 @@ func get_input():
 		playerSprite.play('open')
 		blowing_bubble = true;
 		bubble.visible = true;
+		if not bubbleGrowSoundPlaying:
+			emit_signal("bubbleGrowSig");
+			bubbleGrowSoundPlaying = true;
 
 	else:
 		bubble.visible = false;
 		playerSprite.play('closed')
 		if blowing_bubble: # Bubble gets popped
+			emit_signal("bubblePopSig");
 			blowing_bubble = false;
+			bubbleGrowSoundPlaying = false;
 			bubble.scale = bubble_start_size;
 			# Reset Bubble Position
 			if playerSprite.flip_h:

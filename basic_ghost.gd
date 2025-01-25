@@ -3,6 +3,8 @@ extends Node2D
 @export var speed: float = 20;
 @export var health: float = 1;
 
+signal dieSig();
+
 var alive = true;
 var player_target: Node2D = null;
 @onready var sprite = $AnimatedSprite2D
@@ -14,8 +16,13 @@ func is_alive() -> bool:
 	return alive;
 
 func die() -> void:
+<<<<<<< HEAD
 	if GameState.is_running():
 		GameState.score += 10;
+=======
+	emit_signal("dieSig");
+	print("GUH")
+>>>>>>> master
 	alive = false;	
 	queue_free();
 
@@ -29,6 +36,9 @@ func _process(delta: float) -> void:
 		die();
 
 	var player = get_tree().get_nodes_in_group('Fish').pick_random();
+	if not GameState.is_running():
+		die();
+
 	if alive and GameState.is_running(): 
 		global_position = global_position.move_toward(player.global_position, delta*speed);
 		if global_position.x > player.global_position.x:
