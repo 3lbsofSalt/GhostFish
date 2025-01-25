@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cet3kt5o404rf"]
+[gd_scene load_steps=8 format=3 uid="uid://cet3kt5o404rf"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_sijjy"]
 [ext_resource type="PackedScene" uid="uid://6lcbfp8vjcvy" path="res://scenes/map_start.tscn" id="1_td86r"]
-[ext_resource type="PackedScene" uid="uid://crcru8a8yb2hf" path="res://scenes/entrance.tscn" id="2_qcgyh"]
-[ext_resource type="PackedScene" uid="uid://bdlnsugt6r6q5" path="res://scenes/barrel_block_sideways.tscn" id="4_8fr2d"]
-[ext_resource type="PackedScene" uid="uid://dcriprg6lgjt" path="res://scenes/barrel_block_vert.tscn" id="5_4gftu"]
+[ext_resource type="PackedScene" path="res://scenes/entrance.tscn" id="2_qcgyh"]
+[ext_resource type="PackedScene" path="res://scenes/barrel_block_sideways.tscn" id="4_8fr2d"]
+[ext_resource type="PackedScene" path="res://scenes/barrel_block_vert.tscn" id="5_4gftu"]
+[ext_resource type="PackedScene" path="res://scenes/pearl_room.tscn" id="6_7426o"]
+[ext_resource type="PackedScene" uid="uid://0efdl5j2km8d" path="res://scenes/pearls.tscn" id="6_gvuft"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_sijjy")
@@ -110,3 +112,8 @@ position = Vector2(50, 957)
 
 [node name="BarrelBlockVert7" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
 position = Vector2(50, 309)
+
+[node name="pearlRoom" parent="." instance=ExtResource("6_7426o")]
+
+[node name="Pearls" parent="." instance=ExtResource("6_gvuft")]
+position = Vector2(3700, 5000)

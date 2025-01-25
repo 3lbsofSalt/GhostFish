@@ -1,7 +1,12 @@
 extends Node2D
 
+@onready var SCREEN_WIDTH = 1152
+@onready var SCREEN_HEIGHT = 648
+
 @export var speed: float = 40;
 @export var health: float = 10;
+
+@onready var camera = get_tree().current_scene.get_node("Camera");
 
 enum States {LUNGING, TPOSING};
 var state: States = States.TPOSING;
@@ -45,7 +50,7 @@ func _process(delta: float) -> void:
 		die();
 
 	var player = get_tree().get_nodes_in_group('Fish').pick_random();
-	if alive and GameState.is_running() and state != States.TPOSING: 
+	if alive and isOnScreen() and GameState.is_running() and state != States.TPOSING: 
 		var next_pos = global_position.move_toward(player.global_position, delta*speed);
 		if (global_position - next_pos).x > 0:
 			$AnimatedSprite2D.flip_h = true;
@@ -59,3 +64,13 @@ func _process(delta: float) -> void:
 func _on_collide(body: Node2D) -> void:
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
 		body.take_damage(10);
+		
+		
+func isOnScreen():
+	var onScreen = false;
+	var goodX = global_position.x > camera.position.x and global_position.x < camera.position.x + SCREEN_WIDTH;
+	var goodY = global_position.y > camera.position.y and global_position.y < camera.position.y + SCREEN_HEIGHT;
+	if goodX and goodY:
+		onScreen = true;
+	print(onScreen)
+	return onScreen;
