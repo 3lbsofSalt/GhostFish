@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 	if GameState.pearls_collected >= 3 and not boss_spawned:
 		boss_spawned = true
 		var panTween = create_tween();
-		panTween.tween_property(self, "position", 576, .5)
-		panTween.tween_property(self, "position", 576, .5)
-		panTween.tween_property(self, "position", 2000, .5)
+		panTween.tween_property(self, "position", Vector2(576, position.y), .5)
+		panTween.tween_property(self, "position", Vector2(576, position.y), 1)
+		panTween.tween_property(self, "position", Vector2(2000, position.y), .5)

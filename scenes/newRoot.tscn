@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=17 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="Script" path="res://new_root.gd" id="1_f2t36"]
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
@@ -348,7 +348,7 @@ color = Color(0.201527, 0.201527, 0.201527, 0.643137)
 
 [node name="FindTheBoss" type="Sprite2D" parent="Camera"]
 z_index = 5
-position = Vector2(-1000, 0)
+position = Vector2(-1000, 175)
 texture = ExtResource("8_dbrjh")
 script = ExtResource("9_ndp1d")
 
