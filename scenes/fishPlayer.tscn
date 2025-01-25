@@ -91,9 +91,7 @@ animations = [{
 
 [node name="PlayerBody2D" type="CharacterBody2D" groups=["Fish"]]
 script = ExtResource("1_ddrnt")
-speed = null
-bubble_start_size = null
-bubble_growth_rate = null
+bubble_offset = Vector2(0.35, -0.35)
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
