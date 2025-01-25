@@ -42,3 +42,5 @@ shape = SubResource("RectangleShape2D_prehs")
 [node name="Bottom" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(651.667, 862.499)
 shape = SubResource("RectangleShape2D_2r36u")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
