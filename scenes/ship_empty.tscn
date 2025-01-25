@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://qw460yuqgkgg"]
+
+[ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_lyto1"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="2_nl1er"]
+
+[node name="ShipEmpty" type="Sprite2D"]
+z_index = -3
+texture = ExtResource("1_lyto1")
+centered = false
+
+[node name="Crate" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(50, 50)
+
+[node name="Crate2" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(150, 50)
+
+[node name="Crate3" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(50, 150)
+
+[node name="MidCrate" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(476, 324)
+
+[node name="MidCrate2" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(576, 324)
+
+[node name="MidCrate3" parent="." instance=ExtResource("2_nl1er")]
+position = Vector2(676, 324)
