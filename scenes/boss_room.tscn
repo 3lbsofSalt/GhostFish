@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl8kdk46smn6"]
+[gd_scene load_steps=8 format=3 uid="uid://dby40u6o08wli"]
 
-[ext_resource type="Texture2D" uid="uid://v6sytt5nuw61" path="res://Assets/pearlMessage.png" id="1_554u8"]
+[ext_resource type="Texture2D" uid="uid://e834w5jwmkh8" path="res://Assets/pearlMessage.png" id="1_554u8"]
 [ext_resource type="Texture2D" uid="uid://bl7emf2b3rqio" path="res://Assets/bossFloor.png" id="1_qvtev"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_mpfjr"]
 [ext_resource type="Script" path="res://scenes/boss_room.gd" id="2_uwf0t"]
