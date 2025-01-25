@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	self.text = "score: " + str(GameState.score)
+	self.text = "score: " + str(GameState.score) + "\npearls: " + str(GameState.pearls_collected)

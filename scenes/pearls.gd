@@ -16,3 +16,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# change animation
 	if body.is_in_group('Fish'):
 		self.play('collected')
+		if GameState.is_running():
+			GameState.score += 200;
