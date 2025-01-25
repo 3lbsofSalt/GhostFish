@@ -2,7 +2,7 @@ extends Node2D
 
 
 @onready var fish = get_tree().current_scene.get_node("PlayerBody2D");
-@onready var ghost = get_tree().current_scene.get_node("BasicGhost");
+@onready var ghosts = get_tree().get_nodes_in_group('Ghost');
 
 @onready var bubblePopSound = $BubblePop
 @onready var bubbleGrowSound = $BubbleGrow
@@ -13,10 +13,18 @@ extends Node2D
 func _ready() -> void:
 	fish.bubblePopSig.connect(playBubblePopSound);
 	fish.bubbleGrowSig.connect(playBubbleGrowSound);
-	ghost.dieSig.connect(playGhostKillSound);
+	for ghost in ghosts:
+		if ghost.is_class('Area2D'):
+			ghost.death_sound_connected = true;
+			ghost.dieSig.connect(playGhostKillSound);
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	for ghost in get_tree().get_nodes_in_group('Ghost'):
+		if ghost.is_class('Area2D') and not ghost.death_sound_connected:
+			ghost.death_sound_connected = true;
+			ghost.dieSig.connect(playGhostKillSound);
 	pass
 	
 	

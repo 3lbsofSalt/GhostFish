@@ -4,6 +4,7 @@ var speed = 10;
 @export var speed_mean: float = 200;
 @export var speed_std: float = 100;
 @export var health: float = 1;
+var death_sound_connected = false;
 
 signal dieSig();
 
