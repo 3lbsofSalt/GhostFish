@@ -78,6 +78,7 @@ animations = [{
 script = ExtResource("1_ddrnt")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rnjlx")
 frame_progress = 0.751347
 

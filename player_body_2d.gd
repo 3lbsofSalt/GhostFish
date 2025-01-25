@@ -5,6 +5,7 @@ const SPEED = 600.0
 
 @onready var playerSprite = $PlayerSprite;
 var alive = true;
+var blowing_bubble = true;
 
 func get_input():
 	if not GameState.is_running():
@@ -21,6 +22,12 @@ func get_input():
 			playerSprite.flip_h = true;
 	elif (velocity.x == 0 and velocity.y == 0):
 		playerSprite.play("default")
+
+	if MouthDetection.mouth_open:
+		print('blowing bubble')
+		pass
+		#blow bubble
+	print('not blowing bubble')
 		
 func _physics_process(_delta):
 	get_input()
