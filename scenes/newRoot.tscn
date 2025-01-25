@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-[gd_scene load_steps=9 format=3 uid="uid://c5tiuqr3ggo8o"]
-=======
 [gd_scene load_steps=12 format=3 uid="uid://c5tiuqr3ggo8o"]
->>>>>>> master
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
 [ext_resource type="PackedScene" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://score.gd" id="5_050st"]
-=======
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
 [ext_resource type="PackedScene" uid="uid://bxvt6ntnxgqs8" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
 [ext_resource type="PackedScene" uid="uid://4u3lbbx78ycl" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 
->>>>>>> master
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
@@ -56,7 +49,6 @@ value = 10.0
 show_percentage = false
 script = ExtResource("6_eivrp")
 
-<<<<<<< HEAD
 [node name="Label" type="Label" parent="Camera"]
 offset_left = 906.0
 offset_top = 63.0
@@ -66,7 +58,6 @@ scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
 script = ExtResource("5_050st")
-=======
 [node name="Spawner4" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(1100, -64)
 
@@ -102,7 +93,6 @@ position = Vector2(-58, 605)
 
 [node name="Spawner12" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(-58, 711)
->>>>>>> master
 
 [node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
 

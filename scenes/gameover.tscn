@@ -74,6 +74,7 @@ script = ExtResource("7_k31jh")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 z_index = 100
+layout_mode = 0
 offset_left = 335.0
 offset_top = 4846.0
 offset_right = 833.0

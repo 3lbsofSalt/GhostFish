@@ -16,13 +16,10 @@ func is_alive() -> bool:
 	return alive;
 
 func die() -> void:
-<<<<<<< HEAD
 	if GameState.is_running():
 		GameState.score += 10;
-=======
 	emit_signal("dieSig");
 	print("GUH")
->>>>>>> master
 	alive = false;	
 	queue_free();
 
