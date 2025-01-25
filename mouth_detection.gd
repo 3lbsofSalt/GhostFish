@@ -15,8 +15,7 @@ func _ready():
 		var file = FileAccess.open(mouth_state_file_path, FileAccess.WRITE)
 		file.store_string("closed")
 		file.close()
-	
-
+		
 	# Start checking the file for updates
 	set_process(true)
 
