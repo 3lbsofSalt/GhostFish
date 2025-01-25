@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed = 20;
+@export var speed: float = 20;
 
 var alive = true;
 var player_target: Node2D = null;

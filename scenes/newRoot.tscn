@@ -5,19 +5,6 @@
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
-[ext_resource type="Shader" path="res://fog.gdshader" id="6_lqlxa"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1w3k2"]
-shader = ExtResource("6_lqlxa")
-shader_parameter/speed = Vector2(0.1, 0.1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_a2t0p"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vpifj"]
-width = 1152
-height = 648
-seamless = true
-noise = SubResource("FastNoiseLite_a2t0p")
 
 [node name="NewRoot" type="Node2D"]
 
@@ -27,7 +14,6 @@ position = Vector2(4032, 5500)
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
 
 [node name="Camera" type="Camera2D" parent="."]
-unique_name_in_owner = true
 position = Vector2(3456, 5184)
 anchor_mode = 0
 script = ExtResource("3_nlxba")

@@ -79,12 +79,8 @@ script = ExtResource("1_ddrnt")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rnjlx")
-frame_progress = 0.0420332
+frame_progress = 0.173867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2, 1.2)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="FishCollision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_76fy2")
