@@ -4,8 +4,10 @@ var python_process_id = null
 var mouth_state_file_path = "res://mouth_open.txt"  # Adjust path if needed
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# setup the python env if it doesnt exist
+	python_process_id = OS.execute("./setup.sh", [""])
 	# Run the Python script
-	python_process_id = OS.execute("/home/isaacp/repos/GhostFish/ghostfishenv/bin/python", ["mouth_detection.py"])
+	python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
 	print("Python script started with process ID: ", python_process_id)
 
 	# Check if the file exists
@@ -26,10 +28,9 @@ func _process(delta):
 		file.close()
 
 		# Example: Use mouth state in the game
-		if mouth_state == "open":
+		if mouth_state == "yes":
 			print("Mouth is open")
-			get_node("Player").perform_mouth_open_action()
-		elif mouth_state == "closed":
+		elif mouth_state == "no":
 			print("Mouth is closed")
 
 func _exit_tree():
