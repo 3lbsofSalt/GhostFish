@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 // --- Uniforms --- //
-uniform vec2 speed = vec2(0.1, 0.1);
+uniform vec2 speed = vec2(0.01, 0.01);
 
 // --- Functions --- //
 void fragment() {

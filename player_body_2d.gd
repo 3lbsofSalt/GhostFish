@@ -11,9 +11,9 @@ func get_input():
 	if (velocity.x != 0 or velocity.y != 0):
 		playerSprite.play("run")
 		if (velocity.x > 0):
-			playerSprite.flip_h = true;
-		else:
 			playerSprite.flip_h = false;
+		else:
+			playerSprite.flip_h = true;
 	elif (velocity.x == 0 and velocity.y == 0):
 		playerSprite.play("default")
 		
