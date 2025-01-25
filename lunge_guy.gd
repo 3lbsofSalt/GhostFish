@@ -73,5 +73,4 @@ func isOnScreen():
 	var goodY = global_position.y > camera.position.y and global_position.y < camera.position.y + SCREEN_HEIGHT;
 	if goodX and goodY:
 		onScreen = true;
-	print(onScreen)
 	return onScreen;

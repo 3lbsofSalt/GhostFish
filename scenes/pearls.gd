@@ -21,4 +21,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		self.play('collected')
 		if GameState.is_running():
 			GameState.score += 200;
+			GameState.pearls_collected += 1;
 		$GetPearl.play();

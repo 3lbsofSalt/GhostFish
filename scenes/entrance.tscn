@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://crcru8a8yb2hf"]
+[gd_scene load_steps=5 format=3 uid="uid://crcru8a8yb2hf"]
 
-[ext_resource type="Texture2D" uid="uid://cw3ustibtf0jl" path="res://Assets/waterBackdrop.png" id="1_vjisd"]
+[ext_resource type="Texture2D" uid="uid://b7mcim26x0vqa" path="res://Assets/entranceBackdrop.png" id="1_thvun"]
+[ext_resource type="Texture2D" uid="uid://cbfbp0r5igjqv" path="res://Assets/shipwreck.png" id="2_i7viv"]
+[ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="3_f44na"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgnyt"]
 size = Vector2(32, 657)
 
 [node name="ENTRANCE" type="Sprite2D"]
-self_modulate = Color(0.365664, 0.958924, 0, 1)
 z_index = -3
-texture = ExtResource("1_vjisd")
+texture = ExtResource("1_thvun")
 centered = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -20,3 +21,10 @@ shape = SubResource("RectangleShape2D_vgnyt")
 [node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1170, 316.666)
 shape = SubResource("RectangleShape2D_vgnyt")
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(590, 158)
+texture = ExtResource("2_i7viv")
+
+[node name="Fog" parent="." instance=ExtResource("3_f44na")]
+position = Vector2(0, 0)

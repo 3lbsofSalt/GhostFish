@@ -1,15 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=14 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
-[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
 [ext_resource type="Script" path="res://score.gd" id="5_050st"]
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
-[ext_resource type="PackedScene" uid="uid://bxvt6ntnxgqs8" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
+[ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
 [ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
@@ -94,8 +93,6 @@ position = Vector2(-58, 605)
 
 [node name="Spawner12" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(-58, 711)
-
-[node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
 
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
 
