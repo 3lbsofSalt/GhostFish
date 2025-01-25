@@ -16,6 +16,9 @@ func die() -> void:
 	alive = false;	
 	queue_free();
 
+func take_damage() -> void:
+	die();
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -25,7 +28,6 @@ func _process(delta: float) -> void:
 
 
 func _on_collide(body: Node2D) -> void:
-	print('arieostnaorist')
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
 		body.take_damage();
 	else:
