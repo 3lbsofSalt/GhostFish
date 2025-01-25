@@ -16,7 +16,6 @@ func random_normal(mean: float, stddev: float) -> float:
 
 func _on_spawn_timer_timeout() -> void:
 	var rand = randf_range(0, 100);
-	print(GameState.enemies_should_spawn());
 	if rand <= spawn_chance and GameState.enemies_should_spawn():
 		var enemy: Node2D = spawn.instantiate();
 		enemy.global_position = global_position;
