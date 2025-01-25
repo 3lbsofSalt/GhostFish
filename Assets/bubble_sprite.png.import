@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b43vv2hrw2p0y"
+=======
+uid="uid://bo5fdlpptd01a"
+>>>>>>> 6f3407e (Not sure)
 path="res://.godot/imported/bubble_sprite.png-a8bab83605ab564261af2b9541e32684.ctex"
 metadata={
 "vram_texture": false
