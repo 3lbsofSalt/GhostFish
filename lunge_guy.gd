@@ -28,6 +28,8 @@ func is_alive() -> bool:
 	return alive;
 
 func die() -> void:
+	if GameState.is_running():
+		GameState.score += 100;
 	alive = false;	
 	queue_free();
 

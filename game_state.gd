@@ -1,5 +1,7 @@
 extends Node
 
+var score = 0.0;
+
 func is_running() -> bool:
 	var players: Array[Node] = get_tree().get_nodes_in_group('Fish');
 	var players_alive: int = 0;
