@@ -38,7 +38,7 @@ func take_damage(damage = 1) -> void:
 	modulate = Color(1, .5, .5, 1);
 	var hitTween = create_tween();
 	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
-
+	#print("BUTLER HEALTH ", health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

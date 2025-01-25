@@ -50,10 +50,10 @@ script = ExtResource("6_eivrp")
 
 [node name="Label" type="Label" parent="Camera"]
 z_index = 100
-offset_left = 906.0
-offset_top = 63.0
-offset_right = 1277.0
-offset_bottom = 200.0
+offset_left = 755.0
+offset_top = 65.0
+offset_right = 1136.0
+offset_bottom = 202.0
 scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
@@ -94,6 +94,15 @@ position = Vector2(-58, 605)
 
 [node name="Spawner12" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(-58, 711)
+
+[node name="Label2" type="Label" parent="Camera"]
+offset_left = 755.0
+offset_top = 14.0
+offset_right = 1092.0
+offset_bottom = 151.0
+scale = Vector2(0.416051, 0.333212)
+theme_override_font_sizes/font_size = 100
+text = "health:"
 
 [node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
 
