@@ -64,6 +64,7 @@ scale = Vector2(1, 1.00272)
 polygon = PackedVector2Array(2, -3, 2, -3, 2, -7, 2, -9, 2, -17, 7, -17, 7, -9, 7, -9, 7, -7, 7, -7, 7, -3, 7, 6, 2, 6, 2, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Ghost"]]
+z_index = 99
 texture_filter = 1
 position = Vector2(4.60556, -3.60556)
 scale = Vector2(0.418576, 0.418576)
