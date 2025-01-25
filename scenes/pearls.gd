@@ -18,6 +18,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	# change animation
 	if body.is_in_group('Fish') and not collected:
 		collected = true;
+		body.health = min(body.max_health, body.health + body.pearl_health_recovery)
 		self.play('collected')
 		if GameState.is_running():
 			GameState.score += 200;

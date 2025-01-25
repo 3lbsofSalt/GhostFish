@@ -1,6 +1,8 @@
 extends Node2D
 
-@export var speed: float = 20;
+var speed = 10;
+@export var speed_mean: float = 200;
+@export var speed_std: float = 100;
 @export var health: float = 1;
 
 signal dieSig();
