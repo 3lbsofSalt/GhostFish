@@ -1,7 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://0efdl5j2km8d"]
-
-[ext_resource type="Texture2D" uid="uid://bedm74clhj8fg" path="res://Assets/shell.png" id="1_ukyeh"]
-[ext_resource type="Texture2D" uid="uid://b2uqouerx18gc" path="res://Assets/pearl_in_shell.png" id="2_y52cc"]
+[ext_resource type="Texture2D" uid="uid://dulvbqje3tp34" path="res://Assets/shell.png" id="1_ukyeh"]
+[ext_resource type="Texture2D" uid="uid://b8fwxf2mpjnbv" path="res://Assets/pearl_in_shell.png" id="2_y52cc"]
 [ext_resource type="Script" path="res://scenes/pearls.gd" id="3_foha0"]
 [ext_resource type="Script" path="res://pearlArea.gd" id="4_uywkq"]
 [ext_resource type="AudioStream" uid="uid://bjwki1wk28xle" path="res://sounds/collectGem.mp3" id="5_tlsu3"]

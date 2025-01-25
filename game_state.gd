@@ -2,6 +2,8 @@ extends Node
 
 var score = 0.0;
 var pearls_collected = 0;
+var enemy_speed_mean = 300;
+var enemy_speed_std = 100;
 var spawn_rate: float = 50;
 
 func enemies_should_spawn() -> bool:

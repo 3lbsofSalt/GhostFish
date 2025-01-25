@@ -9,6 +9,7 @@ extends CharacterBody2D;
 @export var bubble_offset: Vector2 = Vector2(1, -1);
 @export var health: float = 10.0;
 @export var max_health: float = 10.0;
+@export var pearl_health_recovery: float = 5;
 
 
 @onready var playerSprite = $PlayerSprite;
