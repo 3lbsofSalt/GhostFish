@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=17 format=3 uid="uid://c5tiuqr3ggo8o"]
 
+[ext_resource type="Script" path="res://new_root.gd" id="1_f2t36"]
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
@@ -13,6 +14,7 @@
 [ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
+[ext_resource type="AudioStream" uid="uid://cwepgasbha1pl" path="res://sounds/mainHauntedMusic.mp3" id="15_6pwsi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_722p6"]
 bg_color = Color(0.852479, 0, 0.149081, 1)
@@ -22,6 +24,7 @@ border_width_right = 1
 border_width_bottom = 1
 
 [node name="NewRoot" type="Node2D"]
+script = ExtResource("1_f2t36")
 
 [node name="PlayerBody2D" parent="." instance=ExtResource("1_s4bfd")]
 position = Vector2(4032, 5500)
@@ -409,5 +412,9 @@ position = Vector2(3993, 5261)
 
 [node name="GhostSpawner2" parent="." instance=ExtResource("7_hlkdp")]
 position = Vector2(3368, 4942)
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_6pwsi")
+parameters/looping = true
 
 [connection signal="value_changed" from="Camera/ProgressBar" to="PlayerBody2D" method="_on_progress_bar_value_changed"]

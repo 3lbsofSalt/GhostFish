@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://restart_button.gd" id="1_wmueb"]
 [ext_resource type="Texture2D" uid="uid://d0aaodwn4dnlk" path="res://Assets/play.png" id="2_h28n2"]
-[ext_resource type="Texture2D" uid="uid://bjr3rutt4nijr" path="res://Assets/openwideclyde.png" id="3_116kk"]
+[ext_resource type="Texture2D" uid="uid://5gqofqom3pxb" path="res://Assets/openwideclyde.png" id="3_116kk"]
 [ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="5_27yir"]
 [ext_resource type="Texture2D" uid="uid://jpm2qp473nqu" path="res://Assets/open_mouth.png" id="5_pmdme"]
 [ext_resource type="Script" path="res://scenes/startupfishanimation.gd" id="6_nwjjt"]

@@ -95,6 +95,11 @@ func getPosition():
 	return position;
 
 func take_damage(amount = 1):
+	modulate = Color(1, .5, .5, 1);
+	var hitTween = create_tween();
+	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
+	$PlayerSprite/TakeDamage.play();
+	
 	health -= amount
 	health = clamp(health, 0, max_health)
 
