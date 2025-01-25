@@ -64,7 +64,7 @@ func _process(delta: float) -> void:
 
 func _on_collide(body: Node2D) -> void:
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
-		body.take_damage(10);
+		body.take_damage(2);
 		
 		
 func isOnScreen():

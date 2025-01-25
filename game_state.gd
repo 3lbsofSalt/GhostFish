@@ -6,6 +6,7 @@ var enemy_speed_mean = 300;
 var enemy_speed_std = 100;
 var boss_defeated = false;
 var spawn_rate: float = 50;
+var spawn_chance = 1
 
 func enemies_should_spawn() -> bool:
 	if %Map and %Map.has_method('player_in_ship'):
