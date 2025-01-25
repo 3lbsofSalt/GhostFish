@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkeptt61effav"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_n0q3t"]
+[ext_resource type="Texture2D" uid="uid://d0aaodwn4dnlk" path="res://Assets/play.png" id="2_h28n2"]
+[ext_resource type="Texture2D" uid="uid://c6img1etye1fl" path="res://Assets/ghostfish.png" id="3_vpx45"]
+[ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="5_27yir"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.422
+anchor_top = 0.636
+anchor_right = 0.566
+anchor_bottom = 0.753
+offset_left = -0.144012
+offset_top = -0.128021
+offset_right = -0.0320435
+offset_bottom = 0.0559998
+script = ExtResource("1_n0q3t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(80, 38)
+scale = Vector2(0.193089, 0.264045)
+texture = ExtResource("2_h28n2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(585, 205)
+scale = Vector2(1.18217, 1.3427)
+texture = ExtResource("3_vpx45")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579.75, 321.5)
+scale = Vector2(1.79238, 1.45928)
+texture = ExtResource("5_27yir")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
