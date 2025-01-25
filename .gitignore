@@ -1,5 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+<<<<<<< HEAD
 env/
 mouth_open.txt
+=======
+.DS_store
+>>>>>>> master

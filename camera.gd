@@ -16,11 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	playerPosition = playerFish.getPosition();
-	print(playerPosition)
 	var new_frame_num = Vector2(int(playerPosition.x) / SCREEN_WIDTH, int(playerPosition.y) / SCREEN_HEIGHT)
 	if (new_frame_num != current_frame_num):
 		current_frame_num = new_frame_num;
-		print(current_frame_num)
 		var panTween = create_tween();
 		var newPosition = Vector2(SCREEN_WIDTH * new_frame_num.x, SCREEN_HEIGHT * new_frame_num.y)
 		panTween.tween_property(self, "position", newPosition, PAN_TIME)

@@ -1,29 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=10 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
-[ext_resource type="Texture2D" uid="uid://cw3ustibtf0jl" path="res://Assets/waterBackdrop.png" id="3_xu64r"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
+[ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
+[ext_resource type="Shader" path="res://fog.gdshader" id="6_lqlxa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1w3k2"]
+shader = ExtResource("6_lqlxa")
+shader_parameter/speed = Vector2(0.1, 0.1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a2t0p"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vpifj"]
+width = 1152
+height = 648
+seamless = true
+noise = SubResource("FastNoiseLite_a2t0p")
 
 [node name="NewRoot" type="Node2D"]
 
 [node name="PlayerBody2D" parent="." instance=ExtResource("1_s4bfd")]
-position = Vector2(500, 500)
+position = Vector2(4032, 5298)
 
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
 
-[node name="Backdrop" type="Sprite2D" parent="."]
-z_index = -3
-texture = ExtResource("3_xu64r")
-centered = false
-
-[node name="Backdrop2" type="Sprite2D" parent="."]
-self_modulate = Color(0.365664, 0.958924, 0, 1)
-z_index = -3
-position = Vector2(0, 648)
-texture = ExtResource("3_xu64r")
-centered = false
-
 [node name="Camera" type="Camera2D" parent="."]
+position = Vector2(3456, 5184)
 anchor_mode = 0
 script = ExtResource("3_nlxba")
+
+[node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
+
+[node name="Map" parent="." instance=ExtResource("5_8sjng")]
+
+[node name="Fog" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1w3k2")
+position = Vector2(3456, 3888)
+texture = SubResource("NoiseTexture2D_vpifj")
+centered = false
