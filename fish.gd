@@ -11,8 +11,8 @@ extends CharacterBody2D;
 @export var max_health: float = 10.0;
 @export var pearl_health_recovery: float = 5;
 var can_take_damage = true;
-var max_damage_timer = 2000;
-var damage_timer = 2000;
+var max_damage_timer = 1000;
+var damage_timer = 1000;
 
 
 @onready var playerSprite = $PlayerSprite;
