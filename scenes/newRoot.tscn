@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
@@ -9,7 +9,8 @@
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
 [ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
-[ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
+[ext_resource type="Script" path="res://scenes/minimap.gd" id="7_8oqas"]
+[ext_resource type="PackedScene" uid="uid://4u3lbbx78ycl" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
 
@@ -49,10 +50,10 @@ script = ExtResource("6_eivrp")
 
 [node name="Label" type="Label" parent="Camera"]
 z_index = 100
-offset_left = 906.0
-offset_top = 63.0
-offset_right = 1277.0
-offset_bottom = 200.0
+offset_left = 905.0
+offset_top = 57.0
+offset_right = 1286.0
+offset_bottom = 194.0
 scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
@@ -94,7 +95,276 @@ position = Vector2(-58, 605)
 [node name="Spawner12" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(-58, 711)
 
+[node name="Label2" type="Label" parent="Camera"]
+z_index = 999
+offset_left = 774.0
+offset_top = 14.0
+offset_right = 1111.0
+offset_bottom = 151.0
+scale = Vector2(0.375634, 0.3049)
+theme_override_font_sizes/font_size = 100
+text = "health:"
+
+[node name="Minimap" type="GridContainer" parent="Camera"]
+unique_name_in_owner = true
+z_index = 630
+offset_left = 978.0
+offset_top = 476.0
+offset_right = 1018.0
+offset_bottom = 516.0
+scale = Vector2(3.81312, 3.81312)
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 7
+script = ExtResource("7_8oqas")
+
+[node name="ColorRect" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect3" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect4" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect5" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect6" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect7" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect8" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect9" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect10" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect11" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect12" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect13" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect14" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect15" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect16" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect17" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect18" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect19" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect20" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect21" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect22" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect23" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect24" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect25" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect26" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect27" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect28" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect29" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect30" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect31" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect32" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect33" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect34" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect35" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect36" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect37" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect38" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect39" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect40" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect41" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect42" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect43" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect44" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect45" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect46" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect47" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect48" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect49" type="ColorRect" parent="Camera/Minimap"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
+unique_name_in_owner = true
 
 [node name="BasicGhost2" parent="." instance=ExtResource("2_avy68")]
 position = Vector2(3826, 5282)
