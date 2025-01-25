@@ -5,9 +5,7 @@ extends Marker2D
 
 func _on_spawn_timer_timeout() -> void:
 	var rand = randf_range(0, 100);
-	print(rand);
 	if rand <= spawn_chance:
-		print('should happen...')
 		var enemy: Node2D = spawn.instantiate();
 		enemy.global_position = global_position;
 		# enemy.global_position = global_position;

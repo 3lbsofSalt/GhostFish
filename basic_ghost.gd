@@ -19,7 +19,6 @@ func die() -> void:
 	if GameState.is_running():
 		GameState.score += 10;
 	emit_signal("dieSig");
-	print("GUH")
 	alive = false;	
 	queue_free();
 

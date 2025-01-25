@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxvt6ntnxgqs8"]
+[gd_scene load_steps=9 format=3 uid="uid://cf7jsuaan6580"]
 
 [ext_resource type="Script" path="res://lunge_guy.gd" id="1_i36d0"]
 [ext_resource type="Texture2D" uid="uid://d3xqbwdl7nvci" path="res://Assets/LungingGhost.png" id="2_6dnbm"]

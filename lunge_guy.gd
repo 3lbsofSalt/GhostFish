@@ -9,7 +9,6 @@ var alive = true;
 var player_target: Node2D = null;
 
 func _update_state() -> void:
-	print('arsiotne');
 	var timer: Timer = %StateTimer;
 	if state == States.TPOSING:
 		state = States.LUNGING;
@@ -35,6 +34,10 @@ func die() -> void:
 
 func take_damage(damage = 1) -> void:
 	health -= damage;
+	print("hit")
+	modulate = Color(1, .5, .5, 1);
+	var hitTween = create_tween();
+	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

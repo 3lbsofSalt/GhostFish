@@ -13,6 +13,7 @@ extends Node2D
 @onready var roomSceneZigZagSide = preload("res://scenes/ship_zig_zag_side.tscn");
 @onready var roomSceneDivideUpRight = preload("res://scenes/ship_divide_up_right.tscn");
 @onready var roomSceneDivideDownRight = preload("res://scenes/ship_divide_down_right.tscn");
+@onready var roomSceneBoss = preload("res://scenes/boss_room.tscn");
 
 # ROOM CODES:
 # 0 = empty room
@@ -22,6 +23,7 @@ extends Node2D
 # 4 = zig zag side
 # 5 = divide up right
 # 6 = divide down right
+# 7 = boss
 
 func _ready() -> void:
 	var roomList = [1, 1, 2, 2, 3, 3, 4,
@@ -29,7 +31,7 @@ func _ready() -> void:
 					3, 2, 2, 2, 2, 1, 1,
 					3, 0, 0, 0, 0, 0, 0,
 					3, 0, 0, 6, 6, 6, 6,
-					3, 0, 0, 0, 0, 0, 5,
+					3, 0, 0, 7, 0, 0, 5,
 					4, 4, 4, 4, 5, 5, 5]
 	roomList.shuffle()
 	print(roomList)
@@ -40,8 +42,9 @@ func _ready() -> void:
 	
 	for row in range(SHIP_DIMENSION):
 		for col in range(SHIP_DIMENSION):
-			print(row, col)
 			var roomIndexToAdd = roomList[convertTwoDimsToOne(row, col)]
+			if roomIndexToAdd == 7:
+				print(row,col)
 			var roomToAdd = getRoomFromIndex(roomIndexToAdd)
 			var roomInstance = roomToAdd.instantiate();
 				
@@ -64,23 +67,18 @@ func getRoomFromIndex(roomIndexToAdd):
 	match roomIndexToAdd:
 		0:
 			roomToReturn = roomSceneEmpty
-			print("ZERO")
 		1:
 			roomToReturn = roomScenePlus
-			print("ONE")
 		2:
 			roomToReturn = roomSceneScattered
-			print("TWO")
 		3:
 			roomToReturn = roomSceneZigZagUp
-			print("THREE")
 		4:
 			roomToReturn = roomSceneZigZagSide
-			print("FOUR")
 		5:
 			roomToReturn = roomSceneDivideUpRight
-			print("FIVE")
 		6:
 			roomToReturn = roomSceneDivideDownRight
-			print("SIX")
+		7:
+			roomToReturn = roomSceneBoss
 	return roomToReturn;
