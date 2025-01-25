@@ -1,12 +1,12 @@
 extends CharacterBody2D;
 @export var bubble_size_damage_factor: float = (1000/8);
 @export var min_speed: float = 100;
-@export var bubble_slow_down_factor: float = 20;
+@export var bubble_slow_down_factor: float = 7;
 @export var initial_speed: float = 600;
 @export var speed: float = 600.0;
-@export var bubble_start_size: Vector2 = Vector2(0.01, 0.01);
-@export var bubble_growth_rate: Vector2 = Vector2(0.0005, 0.0005);
-@export var bubble_offset: Vector2 = Vector2(1, -1);
+var bubble_start_size: Vector2 = Vector2(0.3, 0.3);
+var bubble_growth_rate: Vector2 = Vector2(0.05, 0.05);
+var bubble_offset: Vector2 = Vector2(1.2, -1.2);
 @export var health: float = 10.0;
 @export var max_health: float = 10.0;
 @export var pearl_health_recovery: float = 5;
@@ -34,6 +34,7 @@ func get_input():
 		return;
 
 	if MouthDetection.mouth_open:
+		$PlayerSprite/Bubble.play('default');
 		playerSprite.play('open')
 		blowing_bubble = true;
 		bubble.visible = true;
@@ -42,7 +43,6 @@ func get_input():
 			bubbleGrowSoundPlaying = true;
 
 	else:
-		bubble.visible = false;
 		playerSprite.play('closed')
 		if blowing_bubble: # Bubble gets popped
 			emit_signal("bubblePopSig");
@@ -50,17 +50,11 @@ func get_input():
 			bubbleGrowSoundPlaying = false;
 			#bubble.scale = bubble_start_size;
 			# Reset Bubble Position
-			if playerSprite.flip_h:
-				bubble.position = Vector2(-34, 2);
-			else:
-				bubble.position = Vector2(34, 2);
 			# Handle Collisions
+			$PlayerSprite/Bubble.play('pop');
 			for collision in bubbleArea.get_overlapping_areas():
 				if collision.is_in_group('Ghost') and collision.has_method('take_damage'):
 					collision.take_damage(bubble.scale[0]*self.bubble_size_damage_factor);
-					
-			bubble.scale = bubble_start_size;
-			self.speed = self.initial_speed
 			
 
 
@@ -125,5 +119,15 @@ func _unhandled_input(event):
 		if event.pressed and event.keycode == KEY_SPACE:
 			print("SHOOT BUBBLE")
 
-func _on_progress_bar_value_changed(value: float) -> void:
-	pass # Replace with function body.
+func _on_bubble_animation_finished() -> void:
+	print($PlayerSprite/Bubble.animation);
+	if $PlayerSprite/Bubble.animation == 'pop':
+		bubble.visible = false;
+		if playerSprite.flip_h:
+			bubble.position = Vector2(-34, 2);
+		else:
+			bubble.position = Vector2(34, 2);
+
+		bubble.scale = bubble_start_size;
+		self.speed = self.initial_speed
+
