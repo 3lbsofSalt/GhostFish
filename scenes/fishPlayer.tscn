@@ -83,4 +83,8 @@ frame_progress = 0.0420332
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2, 1.2)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="FishCollision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_76fy2")

@@ -7,6 +7,10 @@ const SPEED = 600.0
 var alive = true;
 
 func get_input():
+	if not GameState.is_running():
+		velocity.x = 0;
+		velocity.y = 0;
+		return;
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction *  SPEED
 	if (velocity.x != 0 or velocity.y != 0):
@@ -26,7 +30,11 @@ func getPosition():
 	return position;
 
 func take_damage():
+	print('did the thing...')
 	die();
+
+func is_alive() -> bool:
+	return alive;
 
 func die():
 	alive = false;

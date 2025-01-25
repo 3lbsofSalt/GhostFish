@@ -13,6 +13,8 @@ var current_frame_num = Vector2(0,0)
 func _ready() -> void:
 	pass
 
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	playerPosition = playerFish.getPosition();
