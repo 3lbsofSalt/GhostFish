@@ -1,46 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjtbvcpw4eup6"]
+[gd_scene load_steps=4 format=3 uid="uid://bjtbvcpw4eup6"]
 
 [ext_resource type="Texture2D" uid="uid://cw3ustibtf0jl" path="res://Assets/waterBackdrop.png" id="1_et204"]
-[ext_resource type="Script" path="res://player_body_2d.gd" id="2_my5sd"]
-[ext_resource type="Texture2D" uid="uid://cqlx661lijro7" path="res://Assets/playerChicken.png" id="2_w5he0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_76fy2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7vl1"]
-atlas = ExtResource("2_w5he0")
-region = Rect2(0, 0, 43, 44)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f6o35"]
-atlas = ExtResource("2_w5he0")
-region = Rect2(0, 0, 43, 44)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tb0em"]
-atlas = ExtResource("2_w5he0")
-region = Rect2(43, 0, 43, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rnjlx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e7vl1")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f6o35")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tb0em")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}]
+[ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s8mvv"]
+[ext_resource type="Script" path="res://camera.gd" id="4_1tv2l"]
 
 [node name="Root" type="Node2D"]
+
+[node name="PlayerBody2D" parent="." instance=ExtResource("1_s8mvv")]
+position = Vector2(300, 400)
 
 [node name="backdrop" type="Sprite2D" parent="."]
 
@@ -49,14 +16,13 @@ z_index = -5
 texture = ExtResource("1_et204")
 centered = false
 
-[node name="PlayerBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("2_my5sd")
+[node name="WaterBackdrop2" type="Sprite2D" parent="backdrop"]
+self_modulate = Color(0.896769, 0.785455, 2.69532e-06, 1)
+z_index = -5
+position = Vector2(0, 648)
+texture = ExtResource("1_et204")
+centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody2D"]
-position = Vector2(365, 204)
-shape = SubResource("RectangleShape2D_76fy2")
-
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerBody2D"]
-position = Vector2(365, 204)
-sprite_frames = SubResource("SpriteFrames_rnjlx")
-animation = &"run"
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("4_1tv2l")
