@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://beye8hufb4xo6"]
+
+[ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_t0q2a"]
+[ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_riyk2"]
+[ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_btkk7"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="4_vvf7c"]
+
+[node name="ShipPlus" type="Sprite2D"]
+self_modulate = Color(1, 0.196078, 1, 1)
+z_index = -3
+texture = ExtResource("1_t0q2a")
+centered = false
+
+[node name="Fog" parent="." instance=ExtResource("2_riyk2")]
+position = Vector2(0, 0)
+
+[node name="CrateWall" parent="." instance=ExtResource("3_btkk7")]
+
+[node name="Crate" parent="." instance=ExtResource("4_vvf7c")]
+position = Vector2(576, 274)
+
+[node name="Crate2" parent="." instance=ExtResource("4_vvf7c")]
+position = Vector2(576, 324)
+
+[node name="Crate3" parent="." instance=ExtResource("4_vvf7c")]
+position = Vector2(576, 374)
+
+[node name="Crate4" parent="." instance=ExtResource("4_vvf7c")]
+position = Vector2(501, 324)
+
+[node name="Crate5" parent="." instance=ExtResource("4_vvf7c")]
+position = Vector2(651, 324)

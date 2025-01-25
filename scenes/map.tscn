@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cet3kt5o404rf"]
+[gd_scene load_steps=9 format=3 uid="uid://cet3kt5o404rf"]
 
 [ext_resource type="PackedScene" uid="uid://6lcbfp8vjcvy" path="res://scenes/map_start.tscn" id="1_td86r"]
 [ext_resource type="Texture2D" uid="uid://cw3ustibtf0jl" path="res://Assets/waterBackdrop.png" id="1_y6630"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://qw460yuqgkgg" path="res://scenes/ship_empty.tscn" id="2_w0xdv"]
 [ext_resource type="PackedScene" uid="uid://brrfns8v33se" path="res://scenes/ship_divide_down_right.tscn" id="4_0fpyj"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="4_3350b"]
+[ext_resource type="PackedScene" uid="uid://beye8hufb4xo6" path="res://scenes/ship_plus.tscn" id="5_a7kch"]
 [ext_resource type="PackedScene" uid="uid://bq46fgcitu5ol" path="res://scenes/ship_divide_up_right.tscn" id="6_bsrf5"]
 
 [node name="Map" type="Node2D"]
@@ -28,12 +29,8 @@ position = Vector2(1152, 3888)
 [node name="ShipEmpty3" parent="." instance=ExtResource("2_w0xdv")]
 position = Vector2(2304, 3888)
 
-[node name="ShipEmpty4" type="Sprite2D" parent="."]
-self_modulate = Color(1, 0.196078, 1, 1)
-z_index = -3
+[node name="ShipPlus" parent="." instance=ExtResource("5_a7kch")]
 position = Vector2(3456, 3888)
-texture = ExtResource("2_fu8oh")
-centered = false
 
 [node name="ShipEmpty5" type="Sprite2D" parent="."]
 z_index = -3
