@@ -1,12 +1,14 @@
 extends CharacterBody2D;
-@export var bubble_size_damage_factor: float = (1000/8);
+@export var bubble_size_damage_factor: float = (5);
 @export var min_speed: float = 100;
 @export var bubble_slow_down_factor: float = 7;
 @export var initial_speed: float = 600;
 @export var speed: float = 600.0;
 var bubble_start_size: Vector2 = Vector2(0.3, 0.3);
-var bubble_growth_rate: Vector2 = Vector2(0.05, 0.05);
-var bubble_offset: Vector2 = Vector2(1.2, -1.2);
+var bubble_growth_rate: Vector2 = Vector2(0.015, 0.015);
+var bubble_offset = bubble_growth_rate * 24
+
+#var bubble_offset: Vector2 = Vector2(1.2, -1.2);
 @export var health: float = 10.0;
 @export var max_health: float = 10.0;
 @export var pearl_health_recovery: float = 5;
@@ -27,6 +29,10 @@ var blowing_bubble = false;
 var bubble_size = 100;
 
 var bubbleGrowSoundPlaying = false;
+
+func _ready() -> void:
+	self.bubble_offset[1] *= -1
+	
 
 func get_input():
 	if not GameState.is_running():
@@ -52,6 +58,7 @@ func get_input():
 			# Reset Bubble Position
 			# Handle Collisions
 			$PlayerSprite/Bubble.play('pop');
+			print(bubble.scale)
 			for collision in bubbleArea.get_overlapping_areas():
 				if collision.is_in_group('Ghost') and collision.has_method('take_damage'):
 					collision.take_damage(bubble.scale[0]*self.bubble_size_damage_factor);
