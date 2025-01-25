@@ -50,10 +50,10 @@ script = ExtResource("6_eivrp")
 
 [node name="Label" type="Label" parent="Camera"]
 z_index = 100
-offset_left = 905.0
-offset_top = 57.0
-offset_right = 1286.0
-offset_bottom = 194.0
+offset_left = 773.0
+offset_top = 56.0
+offset_right = 1154.0
+offset_bottom = 193.0
 scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
@@ -363,6 +363,22 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="ColorRect" type="ColorRect" parent="Camera"]
+offset_left = 768.0
+offset_top = 16.0
+offset_right = 808.0
+offset_bottom = 56.0
+scale = Vector2(8.79998, 2.15998)
+color = Color(0.230315, 0.230315, 0.230315, 0.643137)
+
+[node name="ColorRect2" type="ColorRect" parent="Camera"]
+offset_left = 969.0
+offset_top = 469.0
+offset_right = 1009.0
+offset_bottom = 509.0
+scale = Vector2(4.23998, 4.19998)
+color = Color(0.201527, 0.201527, 0.201527, 0.643137)
+
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
 unique_name_in_owner = true
 
@@ -386,7 +402,7 @@ stream = ExtResource("8_c543e")
 stream = ExtResource("9_4ggjb")
 
 [node name="Area2D2" parent="." instance=ExtResource("6_sxryn")]
-position = Vector2(4407, 5393)
+position = Vector2(4140, 5506)
 
 [node name="GhostSpawner" parent="." instance=ExtResource("7_hlkdp")]
 position = Vector2(3993, 5261)
