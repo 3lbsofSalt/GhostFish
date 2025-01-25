@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://0efdl5j2km8d"]
+
+[ext_resource type="Texture2D" uid="uid://bedm74clhj8fg" path="res://Assets/shell.png" id="1_ukyeh"]
+[ext_resource type="Texture2D" uid="uid://b2uqouerx18gc" path="res://Assets/pearl_in_shell.png" id="2_y52cc"]
+[ext_resource type="Script" path="res://scenes/pearls.gd" id="3_foha0"]
+[ext_resource type="Script" path="res://pearlArea.gd" id="4_uywkq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_watq7"]
+atlas = ExtResource("1_ukyeh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qx40"]
+atlas = ExtResource("2_y52cc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xe5xe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_watq7")
+}],
+"loop": true,
+"name": &"collected",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qx40")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhtka"]
+size = Vector2(21, 21)
+
+[node name="Pearls" type="AnimatedSprite2D"]
+z_index = -2
+sprite_frames = SubResource("SpriteFrames_xe5xe")
+script = ExtResource("3_foha0")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_uywkq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_hhtka")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

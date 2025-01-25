@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bdlnsugt6r6q5" path="res://scenes/barrel_block_sideways.tscn" id="4_8fr2d"]
 [ext_resource type="PackedScene" uid="uid://dcriprg6lgjt" path="res://scenes/barrel_block_vert.tscn" id="5_4gftu"]
 [ext_resource type="PackedScene" uid="uid://dpd7p01y72soi" path="res://scenes/pearl_room.tscn" id="6_7426o"]
+[ext_resource type="PackedScene" uid="uid://0efdl5j2km8d" path="res://scenes/pearls.tscn" id="6_gvuft"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_sijjy")
@@ -113,3 +114,5 @@ position = Vector2(50, 957)
 position = Vector2(50, 309)
 
 [node name="pearlRoom" parent="." instance=ExtResource("6_7426o")]
+[node name="Pearls" parent="." instance=ExtResource("6_gvuft")]
+position = Vector2(3700, 5000)
