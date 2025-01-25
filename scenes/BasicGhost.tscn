@@ -29,3 +29,5 @@ shape = SubResource("RectangleShape2D_tx3y7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.0180556, 0.0180556)
 sprite_frames = SubResource("SpriteFrames_i4r4u")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_collide"]

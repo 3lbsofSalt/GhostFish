@@ -1,0 +1,17 @@
+extends Node
+
+func is_running() -> bool:
+	var players: Array[Node] = get_tree().get_nodes_in_group('Fish');
+	var players_alive: int = 0;
+	for player in players:
+		if player.has_method('is_alive') and player.is_alive():
+			players_alive = players_alive + 1;
+		
+	if players_alive > 0:
+		return true;
+	else:
+		return false;
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.

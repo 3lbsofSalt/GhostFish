@@ -9,6 +9,9 @@ var player_target: Node2D = null;
 func _ready() -> void:
 	pass # Replace with function body.
 
+func is_alive() -> bool:
+	return alive;
+
 func die() -> void:
 	alive = false;	
 	queue_free();
@@ -17,13 +20,13 @@ func die() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var player = get_tree().get_nodes_in_group('Fish').pick_random();
-	if alive: 
+	if alive and GameState.is_running(): 
 		global_position = global_position.move_toward(player.global_position, delta*speed);
 
 
-
 func _on_collide(body: Node2D) -> void:
-	if body.is_in_group('Fish') and body.has_method('take_damage'):
+	print('arieostnaorist')
+	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
 		body.take_damage();
 	else:
 		print(body.is_in_group('Fish'))
