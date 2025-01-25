@@ -20,7 +20,7 @@ if [ ! -d "$ENV_DIR" ]; then
   else
     echo "requirements.txt file not found. Skipping package installation."
   fi
-  
+  touch "./env/.gdignore"
   echo "Virtual environment setup completed."
 else
   echo "Virtual environment already exists. Skipping creation."
