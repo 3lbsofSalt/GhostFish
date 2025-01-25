@@ -10,6 +10,9 @@ extends CharacterBody2D;
 @export var health: float = 10.0;
 @export var max_health: float = 10.0;
 @export var pearl_health_recovery: float = 5;
+var can_take_damage = true;
+var max_damage_timer = 2000;
+var damage_timer = 2000;
 
 
 @onready var playerSprite = $PlayerSprite;
@@ -76,6 +79,11 @@ func get_input():
 			playerSprite.flip_h = true;
 
 func _process(_delta: float) -> void:
+	if not self.can_take_damage:
+		self.damage_timer -= _delta;
+		if self.damage_timer <= 0:
+			self.can_take_damage = true
+			self.damage_timer = self.max_damage_timer
 	if health <= 0:
 		die();
 
@@ -96,13 +104,15 @@ func getPosition():
 	return position;
 
 func take_damage(amount = 1):
-	modulate = Color(1, .5, .5, 1);
-	var hitTween = create_tween();
-	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
-	$PlayerSprite/TakeDamage.play();
-	
-	health -= amount
-	health = clamp(health, 0, max_health)
+	if self.can_take_damage:
+		modulate = Color(1, .5, .5, 1);
+		var hitTween = create_tween();
+		hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
+		$PlayerSprite/TakeDamage.play();
+		
+		health -= amount
+		health = clamp(health, 0, max_health)
+		self.can_take_damage = false
 
 func is_alive() -> bool:
 	return alive;
