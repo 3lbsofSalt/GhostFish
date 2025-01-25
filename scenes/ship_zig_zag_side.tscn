@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://20ddnakjon5s"]
+
+[ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="1_75o73"]
+[ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_v2bc0"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="2_8okqr"]
+[ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_ydk7u"]
+
+[node name="ShipZigZagSide" type="Sprite2D"]
+texture = ExtResource("1_v2bc0")
+centered = false
+
+[node name="Fog" parent="." instance=ExtResource("1_75o73")]
+position = Vector2(0, 0)
+
+[node name="Crate8" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(1027, 450)
+
+[node name="Crate9" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(952, 450)
+
+[node name="Crate10" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(877, 450)
+
+[node name="Crate11" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(802, 450)
+
+[node name="Crate12" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(727, 450)
+
+[node name="Crate13" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(652, 450)
+
+[node name="Crate14" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(577, 450)
+
+[node name="Crate18" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(502, 450)
+
+[node name="Crate19" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(427, 450)
+
+[node name="Crate20" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(352, 450)
+
+[node name="CrateWall" parent="." instance=ExtResource("3_ydk7u")]
+
+[node name="Crate" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(125, 200)
+
+[node name="Crate2" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(200, 200)
+
+[node name="Crate3" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(275, 200)
+
+[node name="Crate4" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(350, 200)
+
+[node name="Crate5" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(425, 200)
+
+[node name="Crate6" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(500, 200)
+
+[node name="Crate7" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(575, 200)
+
+[node name="Crate15" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(650, 200)
+
+[node name="Crate16" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(725, 200)
+
+[node name="Crate17" parent="." instance=ExtResource("2_8okqr")]
+position = Vector2(800, 200)

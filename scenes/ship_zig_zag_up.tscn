@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxqiqgmqi6duu"]
+
+[ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_l6vcc"]
+[ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_k8w2e"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="3_0ac3i"]
+[ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_ffmbr"]
+
+[node name="ShipZigZagUp" type="Sprite2D"]
+z_index = -3
+texture = ExtResource("1_l6vcc")
+centered = false
+
+[node name="Fog" parent="." instance=ExtResource("2_k8w2e")]
+position = Vector2(0, 0)
+
+[node name="Crate8" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 250)
+
+[node name="Crate9" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 300)
+
+[node name="Crate10" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 350)
+
+[node name="Crate11" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 400)
+
+[node name="Crate12" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 450)
+
+[node name="Crate13" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 500)
+
+[node name="Crate14" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 550)
+
+[node name="CrateWall" parent="." instance=ExtResource("3_ffmbr")]
+
+[node name="Crate" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 100)
+
+[node name="Crate2" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 150)
+
+[node name="Crate3" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 200)
+
+[node name="Crate4" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 250)
+
+[node name="Crate5" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 300)
+
+[node name="Crate6" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 350)
+
+[node name="Crate7" parent="." instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 400)
