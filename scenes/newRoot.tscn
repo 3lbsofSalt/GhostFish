@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=10 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
+[ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
+[ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
+[ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
+[ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
 
 [node name="NewRoot" type="Node2D"]
 
@@ -28,3 +32,15 @@ position = Vector2(3826, 5282)
 
 [node name="Area2D" parent="." instance=ExtResource("2_avy68")]
 position = Vector2(3873, 5420)
+
+[node name="SoundManager" type="Node2D" parent="."]
+script = ExtResource("6_flp0c")
+
+[node name="BubblePop" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("6_4d43d")
+
+[node name="BubbleGrow" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("8_c543e")
+
+[node name="GhostKill" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("9_4ggjb")

@@ -3,6 +3,8 @@ extends Node2D
 @export var speed: float = 20;
 @export var health: float = 1;
 
+signal dieSig();
+
 var alive = true;
 var player_target: Node2D = null;
 
@@ -14,6 +16,8 @@ func is_alive() -> bool:
 	return alive;
 
 func die() -> void:
+	emit_signal("dieSig");
+	print("GUH")
 	alive = false;	
 	queue_free();
 
