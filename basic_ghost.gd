@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func die() -> void:
 	alive = false;	
+	queue_free();
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,3 +19,9 @@ func _process(delta: float) -> void:
 	var player = get_tree().get_nodes_in_group('Fish').pick_random();
 	if alive: 
 		global_position = global_position.move_toward(player.global_position, delta*speed);
+
+
+
+func _on_collide(body: Node2D) -> void:
+	if body.is_in_group('Fish'):
+		body.take_damage();

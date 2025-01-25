@@ -48,3 +48,8 @@ shape = SubResource("RectangleShape2D_76fy2")
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="CollisionShape2D"]
 sprite_frames = SubResource("SpriteFrames_rnjlx")
 animation = &"run"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_76fy2")
