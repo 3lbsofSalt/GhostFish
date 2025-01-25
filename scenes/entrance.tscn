@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://crcru8a8yb2hf"]
+
+[ext_resource type="Texture2D" uid="uid://cw3ustibtf0jl" path="res://Assets/waterBackdrop.png" id="1_vjisd"]
+
+[node name="ENTRANCE" type="Sprite2D"]
+self_modulate = Color(0.365664, 0.958924, 0, 1)
+z_index = -3
+texture = ExtResource("1_vjisd")
+centered = false

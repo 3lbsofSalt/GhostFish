@@ -22,8 +22,8 @@ MouthDetection="*res://mouth_detection.gd"
 
 [global_group]
 
-BasicGhost="Group for BasicGhost Enemies"
 Fish="Global Player Group"
+Ghost="Group for BasicGhost Enemies"
 
 [input]
 
