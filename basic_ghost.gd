@@ -33,5 +33,5 @@ func _process(delta: float) -> void:
 
 func _on_collide(body: Node2D) -> void:
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
-		body.take_damage();
+		body.take_damage(1);
 		take_damage();

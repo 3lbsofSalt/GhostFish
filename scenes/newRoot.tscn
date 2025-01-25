@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=8 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
+[ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_722p6"]
+bg_color = Color(0.852479, 0, 0.149081, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 
 [node name="NewRoot" type="Node2D"]
 
@@ -19,6 +27,20 @@ position = Vector2(3456, 5184)
 anchor_mode = 0
 script = ExtResource("3_nlxba")
 
+[node name="ProgressBar" type="ProgressBar" parent="Camera"]
+z_index = 100
+offset_left = 936.0
+offset_top = 22.0
+offset_right = 1434.0
+offset_bottom = 65.0
+scale = Vector2(0.409258, 0.607211)
+theme_override_styles/background = SubResource("StyleBoxFlat_722p6")
+max_value = 10.0
+step = 0.0
+value = 10.0
+show_percentage = false
+script = ExtResource("6_eivrp")
+
 [node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
 
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
@@ -28,3 +50,6 @@ position = Vector2(3826, 5282)
 
 [node name="Area2D" parent="." instance=ExtResource("2_avy68")]
 position = Vector2(3873, 5420)
+rotation = 2.68616
+
+[connection signal="value_changed" from="Camera/ProgressBar" to="PlayerBody2D" method="_on_progress_bar_value_changed"]

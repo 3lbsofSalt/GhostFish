@@ -5,6 +5,8 @@ extends CharacterBody2D;
 @export var bubble_growth_rate: Vector2 = Vector2(0.0005, 0.0005);
 @export var bubble_offset: Vector2 = Vector2(1, -1);
 @export var health: float = 10.0;
+@export var max_health: float = 10.0;
+
 
 @onready var playerSprite = $PlayerSprite;
 @onready var bubble: AnimatedSprite2D = %Bubble;
@@ -74,8 +76,9 @@ func _physics_process(_delta):
 func getPosition():
 	return position;
 
-func take_damage(damage = 5):
-	health -= damage;
+func take_damage(amount = 1):
+	health -= amount
+	health = clamp(health, 0, max_health)
 
 func is_alive() -> bool:
 	return alive;
@@ -87,3 +90,6 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_SPACE:
 			print("SHOOT BUBBLE")
+
+func _on_progress_bar_value_changed(value: float) -> void:
+	pass # Replace with function body.
