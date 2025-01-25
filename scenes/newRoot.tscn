@@ -25,3 +25,6 @@ script = ExtResource("3_nlxba")
 
 [node name="BasicGhost2" parent="." instance=ExtResource("2_avy68")]
 position = Vector2(3826, 5282)
+
+[node name="Area2D" parent="." instance=ExtResource("2_avy68")]
+position = Vector2(3873, 5420)
