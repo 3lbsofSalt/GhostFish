@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=14 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
-[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
 [ext_resource type="Script" path="res://score.gd" id="5_050st"]
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
@@ -50,10 +49,10 @@ script = ExtResource("6_eivrp")
 
 [node name="Label" type="Label" parent="Camera"]
 z_index = 100
-offset_left = 755.0
-offset_top = 65.0
-offset_right = 1136.0
-offset_bottom = 202.0
+offset_left = 905.0
+offset_top = 57.0
+offset_right = 1286.0
+offset_bottom = 194.0
 scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
@@ -96,15 +95,13 @@ position = Vector2(-58, 605)
 position = Vector2(-58, 711)
 
 [node name="Label2" type="Label" parent="Camera"]
-offset_left = 755.0
-offset_top = 14.0
-offset_right = 1092.0
-offset_bottom = 151.0
-scale = Vector2(0.416051, 0.333212)
+offset_left = 774.0
+offset_top = 21.0
+offset_right = 1111.0
+offset_bottom = 158.0
+scale = Vector2(0.373387, 0.230772)
 theme_override_font_sizes/font_size = 100
 text = "health:"
-
-[node name="Crate" parent="." instance=ExtResource("5_5xgfe")]
 
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
 
