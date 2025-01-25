@@ -2,28 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-<<<<<<< HEAD
-uid="uid://bl6ek7uo6c6wu"
-=======
-<<<<<<< HEAD
-uid="uid://dmko4np0o5s2h"
-=======
-uid="uid://bfkx7gcehal4g"
->>>>>>> 4334c27 (Senses bubble)
->>>>>>> 6da3646 (Senses bubble)
-=======
-uid="uid://dcaqwr5t0k6xc"
->>>>>>> 0d5c50f (Added mouth control with bubble)
-path="res://.godot/imported/ghost_fish.png-6b0dc3911a9237e0e513dd4a0a737579.ctex"
+uid="uid://dim6lypvofmu5"
+path="res://.godot/imported/bubble.png-a59ec57e28b5ec59e40fa732ce932285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ghost_fish.png"
-dest_files=["res://.godot/imported/ghost_fish.png-6b0dc3911a9237e0e513dd4a0a737579.ctex"]
+source_file="res://Assets/tmp/bubble.png"
+dest_files=["res://.godot/imported/bubble.png-a59ec57e28b5ec59e40fa732ce932285.ctex"]
 
 [params]
 
