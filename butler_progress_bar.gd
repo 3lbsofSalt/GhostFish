@@ -10,6 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if butler != null:
 		if self.value != butler.health:
+			print("before", self.value)
 			self.value = butler.health
+			print("after", self.value)
 			
 		#print('butler health ', butler.health)

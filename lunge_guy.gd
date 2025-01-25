@@ -34,7 +34,6 @@ func die() -> void:
 
 func take_damage(damage = 1) -> void:
 	health -= damage;
-	print("hit")
 	modulate = Color(1, .5, .5, 1);
 	var hitTween = create_tween();
 	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
