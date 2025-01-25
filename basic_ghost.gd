@@ -23,5 +23,8 @@ func _process(delta: float) -> void:
 
 
 func _on_collide(body: Node2D) -> void:
-	if body.is_in_group('Fish'):
+	if body.is_in_group('Fish') and body.has_method('take_damage'):
 		body.take_damage();
+	else:
+		print(body.is_in_group('Fish'))
+		print(body.has_method('take_damage'))

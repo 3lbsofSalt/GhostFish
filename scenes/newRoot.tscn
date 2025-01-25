@@ -25,6 +25,7 @@ noise = SubResource("FastNoiseLite_a2t0p")
 position = Vector2(4032, 5298)
 
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
+position = Vector2(3609, 5361)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(3456, 5184)
