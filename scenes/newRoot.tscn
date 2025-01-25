@@ -9,13 +9,12 @@
 [node name="NewRoot" type="Node2D"]
 
 [node name="PlayerBody2D" parent="." instance=ExtResource("1_s4bfd")]
-position = Vector2(4032, 5500)
-bubble_start_size = null
-bubble_growth_rate = null
+position = Vector2(4032, 5298)
 
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
 
 [node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(3456, 5184)
 anchor_mode = 0
 script = ExtResource("3_nlxba")
@@ -25,4 +24,4 @@ script = ExtResource("3_nlxba")
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
 
 [node name="BasicGhost2" parent="." instance=ExtResource("2_avy68")]
-position = Vector2(3844, 5520)
+position = Vector2(3826, 5282)

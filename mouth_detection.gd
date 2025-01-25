@@ -8,7 +8,8 @@ func _ready():
 	# setup the python env if it doesnt exist
 	#python_process_id = OS.execute("./setup.sh", [""])
 	# Run the Python script
-	if OS.get_name() == 'X11':
+	print(OS.get_name())
+	if OS.get_name() == 'X11' or OS.get_name() == 'Linux':
 		python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
 	else:
 		python_process_id = OS.execute("env\\Scripts\\python.exe", ["mouth_detection.py"])
