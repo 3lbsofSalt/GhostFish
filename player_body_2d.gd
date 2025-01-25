@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
-
-const SPEED = 600.0
+@export var speed = 600.0;
 
 @onready var playerSprite = $PlayerSprite;
+@onready var bubble: AnimatedSprite2D = %Bubble;
+
 var alive = true;
 var blowing_bubble = false;
+var bubble_size = 100;
+@export var bubble_start_size = 0.01;
+@export var bubble_growth_rate = 0.01;
 
 func get_input():
 	if not GameState.is_running():
@@ -15,13 +19,15 @@ func get_input():
 
 	if MouthDetection.mouth_open:
 		blowing_bubble = true;
+		bubble.visible = true;
 		playerSprite.play('open')
 	else:
 		blowing_bubble = false;
+		bubble.visible = false;
 		playerSprite.play('closed')
 
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction *  SPEED
+	velocity = input_direction *  speed;
 	if (velocity.x != 0 or velocity.y != 0):
 		if (velocity.x > 0):
 			playerSprite.flip_h = false;
