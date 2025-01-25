@@ -31,6 +31,9 @@ func _process(delta: float) -> void:
 		die();
 
 	var player = get_tree().get_nodes_in_group('Fish').pick_random();
+	if not GameState.is_running():
+		die();
+
 	if alive and GameState.is_running(): 
 		global_position = global_position.move_toward(player.global_position, delta*speed);
 		if global_position.x > player.global_position.x:
