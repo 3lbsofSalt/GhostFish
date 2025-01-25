@@ -22,7 +22,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	for ghost in get_tree().get_nodes_in_group('Ghost'):
-		if ghost.is_class('Area2D') and not ghost.death_sound_connected and ghost.has_signal('dieSig'):
+		if ghost.is_class('Area2D') and ghost.has_signal('dieSig') and not ghost.death_sound_connected :
 			ghost.death_sound_connected = true;
 			ghost.dieSig.connect(playGhostKillSound);
 	pass
