@@ -1,15 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://clhyoh1w38s02"]
+[gd_scene load_steps=12 format=3 uid="uid://clhyoh1w38s02"]
 
-[ext_resource type="Script" path="res://button.gd" id="1_q5lua"]
+[ext_resource type="Script" path="res://restart_button.gd" id="1_50rhr"]
+[ext_resource type="Script" path="res://exit_button.gd" id="1_q5lua"]
 [ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="2_ijl47"]
 [ext_resource type="Texture2D" uid="uid://j3di6qyrtri0" path="res://Assets/fontbolt.png" id="2_l2mtx"]
 [ext_resource type="Texture2D" uid="uid://77jhrijhbwd2" path="res://Assets/moutbetter.png" id="3_e6cfv"]
 [ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="5_0qo61"]
 [ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="6_x8q52"]
-[ext_resource type="Script" path="res://exit_game_button.gd" id="7_k31jh"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="8_ek65u"]
 [ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="9_oewjf"]
 [ext_resource type="Script" path="res://final_score.gd" id="10_kfncl"]
+
+[sub_resource type="GDScript" id="GDScript_ivmq5"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="restartbutton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.422
@@ -30,9 +44,9 @@ offset_left = -0.144012
 offset_top = -0.128021
 offset_right = -0.0320435
 offset_bottom = 0.0559998
-script = ExtResource("1_q5lua")
+script = ExtResource("1_50rhr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Button"]
+[node name="Sprite2D" type="Sprite2D" parent="restartbutton"]
 position = Vector2(80, 38)
 scale = Vector2(0.193089, 0.264045)
 texture = ExtResource("2_ijl47")
@@ -53,7 +67,7 @@ position = Vector2(579.75, 321.5)
 scale = Vector2(1.79238, 1.45928)
 texture = ExtResource("5_0qo61")
 
-[node name="Button2" type="Button" parent="."]
+[node name="exitgamebutton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.422
@@ -66,11 +80,11 @@ offset_right = -0.0320435
 offset_bottom = 0.320007
 script = ExtResource("1_q5lua")
 
-[node name="Sprite2D" type="Sprite2D" parent="Button2"]
+[node name="Sprite2D" type="Sprite2D" parent="exitgamebutton"]
 position = Vector2(80, 38)
 scale = Vector2(0.193089, 0.264045)
 texture = ExtResource("6_x8q52")
-script = ExtResource("7_k31jh")
+script = SubResource("GDScript_ivmq5")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 z_index = 100
@@ -104,5 +118,5 @@ theme_override_font_sizes/font_size = 100
 text = "1000"
 script = ExtResource("10_kfncl")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="restartbutton" to="restartbutton" method="_on_pressed"]
+[connection signal="pressed" from="exitgamebutton" to="exitgamebutton" method="_on_pressed"]

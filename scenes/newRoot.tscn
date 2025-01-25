@@ -1,17 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5tiuqr3ggo8o"]
+[gd_scene load_steps=15 format=3 uid="uid://c5tiuqr3ggo8o"]
 
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
-[ext_resource type="PackedScene" path="res://scenes/crate.tscn" id="5_5xgfe"]
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
 [ext_resource type="Script" path="res://score.gd" id="5_050st"]
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
-[ext_resource type="PackedScene" uid="uid://bxvt6ntnxgqs8" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
-[ext_resource type="PackedScene" uid="uid://4u3lbbx78ycl" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
-
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
+[ext_resource type="PackedScene" uid="uid://bxvt6ntnxgqs8" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
+[ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
 
@@ -50,6 +49,7 @@ show_percentage = false
 script = ExtResource("6_eivrp")
 
 [node name="Label" type="Label" parent="Camera"]
+z_index = 100
 offset_left = 906.0
 offset_top = 63.0
 offset_right = 1277.0
@@ -58,6 +58,7 @@ scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
 script = ExtResource("5_050st")
+
 [node name="Spawner4" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(1100, -64)
 
@@ -117,7 +118,6 @@ stream = ExtResource("8_c543e")
 [node name="GhostKill" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("9_4ggjb")
 
-[connection signal="value_changed" from="Camera/ProgressBar" to="PlayerBody2D" method="_on_progress_bar_value_changed"]
 [node name="Area2D2" parent="." instance=ExtResource("6_sxryn")]
 position = Vector2(4407, 5393)
 
@@ -126,3 +126,5 @@ position = Vector2(3993, 5261)
 
 [node name="GhostSpawner2" parent="." instance=ExtResource("7_hlkdp")]
 position = Vector2(3368, 4942)
+
+[connection signal="value_changed" from="Camera/ProgressBar" to="PlayerBody2D" method="_on_progress_bar_value_changed"]

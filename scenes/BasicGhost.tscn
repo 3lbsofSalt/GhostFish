@@ -51,6 +51,7 @@ scale = Vector2(2.5, 1.5)
 shape = SubResource("RectangleShape2D_tx3y7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Ghost"]]
+z_index = 99
 sprite_frames = SubResource("SpriteFrames_i4r4u")
 
 [connection signal="body_entered" from="." to="." method="_on_collide"]

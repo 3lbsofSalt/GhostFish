@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://uboyss7i41wa"]
+
+[ext_resource type="Script" path="res://restart_button.gd" id="1_dqdfc"]
+[ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="2_kcsi5"]
+[ext_resource type="Script" path="res://exit_game_button.gd" id="3_uxdo8"]
+
+[node name="exitgamebutton" type="Button"]
+anchors_preset = -1
+anchor_left = 0.422
+anchor_top = 0.793
+anchor_right = 0.566
+anchor_bottom = 0.91
+offset_left = -0.143982
+offset_top = 0.135986
+offset_right = -0.0320435
+offset_bottom = 0.320007
+script = ExtResource("1_dqdfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 38)
+scale = Vector2(0.193089, 0.264045)
+texture = ExtResource("2_kcsi5")
+script = ExtResource("3_uxdo8")
