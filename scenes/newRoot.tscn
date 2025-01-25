@@ -11,8 +11,10 @@
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
 [ext_resource type="Script" path="res://scenes/minimap.gd" id="7_8oqas"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
+[ext_resource type="Texture2D" uid="uid://bl7ij6ytpxwc" path="res://Assets/findTheBoss.png" id="8_dbrjh"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
-[ext_resource type="AudioStream" uid="uid://cyk28bna7qbc8" path="res://sounds/mainHauntedMusic.mp3" id="15_6pwsi"]
+[ext_resource type="Script" path="res://find_the_boss.gd" id="9_ndp1d"]
+[ext_resource type="AudioStream" uid="uid://cwepgasbha1pl" path="res://sounds/mainHauntedMusic.mp3" id="15_6pwsi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_722p6"]
 bg_color = Color(0.852479, 0, 0.149081, 1)
@@ -343,6 +345,12 @@ offset_right = 1009.0
 offset_bottom = 509.0
 scale = Vector2(4.23998, 4.19998)
 color = Color(0.201527, 0.201527, 0.201527, 0.643137)
+
+[node name="FindTheBoss" type="Sprite2D" parent="Camera"]
+z_index = 5
+position = Vector2(-1000, 0)
+texture = ExtResource("8_dbrjh")
+script = ExtResource("9_ndp1d")
 
 [node name="Map" parent="." instance=ExtResource("5_8sjng")]
 unique_name_in_owner = true

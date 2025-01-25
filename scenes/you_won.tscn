@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://w0phlybngtdo"]
+[gd_scene load_steps=9 format=3 uid="uid://b6w8ds45y6xf5"]
 
 [ext_resource type="Texture2D" uid="uid://bxe5iaiqqtoty" path="res://Assets/victory.png" id="1_btjtj"]
 [ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="2_qj8c2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="4_m6a1v"]
 [ext_resource type="Script" path="res://restart_button.gd" id="5_dlip8"]
 [ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="6_kjyll"]
+[ext_resource type="AudioStream" uid="uid://bhkw7iaiuy8cv" path="res://sounds/victory.mp3" id="7_l13au"]
 
 [sub_resource type="GDScript" id="GDScript_ivmq5"]
 script/source = "extends Sprite2D
@@ -75,6 +76,10 @@ script = ExtResource("5_dlip8")
 position = Vector2(80, 38)
 scale = Vector2(0.193089, 0.264045)
 texture = ExtResource("6_kjyll")
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_l13au")
+autoplay = true
 
 [connection signal="pressed" from="exitgamebutton" to="exitgamebutton" method="_on_pressed"]
 [connection signal="pressed" from="restartbutton" to="restartbutton" method="_on_pressed"]
