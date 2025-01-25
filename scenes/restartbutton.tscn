@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq07osbqyj1wd"]
+
+[ext_resource type="Script" path="res://restart_button.gd" id="1_0xnmx"]
+[ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="2_ayilb"]
+
+[node name="restartbutton" type="Button"]
+anchors_preset = -1
+anchor_left = 0.422
+anchor_top = 0.636
+anchor_right = 0.566
+anchor_bottom = 0.753
+offset_left = -0.144012
+offset_top = -0.128021
+offset_right = -0.0320435
+offset_bottom = 0.0559998
+script = ExtResource("1_0xnmx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 38)
+scale = Vector2(0.193089, 0.264045)
+texture = ExtResource("2_ayilb")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

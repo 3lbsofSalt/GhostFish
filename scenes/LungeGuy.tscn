@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf7jsuaan6580"]
+[gd_scene load_steps=9 format=3 uid="uid://bxvt6ntnxgqs8"]
 
 [ext_resource type="Script" path="res://lunge_guy.gd" id="1_i36d0"]
 [ext_resource type="Texture2D" uid="uid://d3xqbwdl7nvci" path="res://Assets/LungingGhost.png" id="2_6dnbm"]
@@ -64,6 +64,7 @@ scale = Vector2(1, 1.00272)
 polygon = PackedVector2Array(2, -3, 2, -3, 2, -7, 2, -9, 2, -17, 7, -17, 7, -9, 7, -9, 7, -7, 7, -7, 7, -3, 7, 6, 2, 6, 2, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Ghost"]]
+z_index = 99
 texture_filter = 1
 position = Vector2(4.60556, -3.60556)
 scale = Vector2(0.418576, 0.418576)

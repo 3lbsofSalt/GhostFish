@@ -8,6 +8,10 @@ func is_running() -> bool:
 	for player in players:
 		if player.has_method('is_alive') and player.is_alive():
 			players_alive = players_alive + 1;
+	
+	if score > 100:
+		get_tree().change_scene_to_file("res://scenes/you_won.tscn")
+		return false
 		
 	if players_alive > 0:
 		return true;

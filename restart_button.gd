@@ -12,8 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	GameState.score = 0.0;
 	get_tree().change_scene_to_file("res://scenes/newRoot.tscn")
-
-
-func _on_button_2_pressed() -> void:
-	get_tree().quit()
