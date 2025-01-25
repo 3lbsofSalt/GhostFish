@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed = 20;
+@export var speed: float = 20;
 
 var alive = true;
 var player_target: Node2D = null;
@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 
 
 func _on_collide(body: Node2D) -> void:
+	print('aireostnoaiersnt');
 	if body.is_in_group('Fish') and body.has_method('take_damage') and GameState.is_running():
 		body.take_damage();
 	else:

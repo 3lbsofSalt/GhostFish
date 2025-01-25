@@ -5,13 +5,15 @@ var mouth_state_file_path = "res://mouth_open.txt"  # Adjust path if needed
 var mouth_open = null;
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# setup the python env if it doesnt exist
+	#python_process_id = OS.execute("./setup.sh", [""])
 	# Run the Python script
-	
-	print("please run the setup.sh file before playing the game otherwise mouth\
-	functionality will not work")
-	
-	python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
-	print("Python script started with process ID: ", python_process_id)
+	print(OS.get_name())
+	if OS.get_name() == 'X11' or OS.get_name() == 'Linux':
+		python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
+	else:
+		python_process_id = OS.execute("env\\Scripts\\python.exe", ["mouth_detection.py"])
+	print("Python script started with process ID: ", python_process_id, OS.get_name())
 
 	# Check if the file exists
 	if !FileAccess.file_exists(mouth_state_file_path):
@@ -25,8 +27,10 @@ func _ready():
 func _process(delta):
 	# Read the mouth state from the file
 	var file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
+	print(file)
 	if file:
 		var mouth_state = file.get_as_text()
+		print(mouth_state)
 		file.close()
 
 		# Example: Use mouth state in the game

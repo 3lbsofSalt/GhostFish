@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://qw460yuqgkgg"]
+[gd_scene load_steps=4 format=3 uid="uid://qw460yuqgkgg"]
 
 [ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_lyto1"]
-[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="2_nl1er"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="3_18x57"]
 [ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="4_1hfwg"]
 
@@ -9,15 +8,6 @@
 z_index = -3
 texture = ExtResource("1_lyto1")
 centered = false
-
-[node name="MidCrate" parent="." instance=ExtResource("2_nl1er")]
-position = Vector2(476, 324)
-
-[node name="MidCrate2" parent="." instance=ExtResource("2_nl1er")]
-position = Vector2(576, 324)
-
-[node name="MidCrate3" parent="." instance=ExtResource("2_nl1er")]
-position = Vector2(676, 324)
 
 [node name="Fog" parent="." instance=ExtResource("3_18x57")]
 position = Vector2(0, 0)

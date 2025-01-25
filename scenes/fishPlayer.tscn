@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6ripmd2conqx"]
+[gd_scene load_steps=17 format=3 uid="uid://c6ripmd2conqx"]
 
 [ext_resource type="Script" path="res://player_body_2d.gd" id="1_ddrnt"]
 [ext_resource type="Texture2D" uid="uid://jpm2qp473nqu" path="res://Assets/open_mouth.png" id="3_fglk3"]
@@ -21,19 +21,19 @@ region = Rect2(0, 64, 64, 64)
 atlas = ExtResource("3_g73iv")
 region = Rect2(64, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wvyxu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_71580"]
 atlas = ExtResource("3_fglk3")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2sn8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_deym4"]
 atlas = ExtResource("3_fglk3")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hptdo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxcvt"]
 atlas = ExtResource("3_fglk3")
 region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_62ll6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7me3"]
 atlas = ExtResource("3_fglk3")
 region = Rect2(64, 64, 64, 64)
 
@@ -58,23 +58,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wvyxu")
+"texture": SubResource("AtlasTexture_71580")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2sn8")
+"texture": SubResource("AtlasTexture_deym4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hptdo")
+"texture": SubResource("AtlasTexture_jxcvt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_62ll6")
+"texture": SubResource("AtlasTexture_e7me3")
 }],
 "loop": true,
 "name": &"open",
-"speed": 10.0
+"speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_h0w5c"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hu84i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -85,25 +85,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvw3w"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76fy2"]
 
 [node name="PlayerBody2D" type="CharacterBody2D" groups=["Fish"]]
 script = ExtResource("1_ddrnt")
+bubble_start_size = null
+bubble_growth_rate = null
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rnjlx")
 animation = &"open"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerSprite"]
-position = Vector2(43, -2)
+[node name="Bubble" type="AnimatedSprite2D" parent="PlayerSprite"]
+unique_name_in_owner = true
+position = Vector2(34, 2)
 scale = Vector2(0.01, 0.01)
-sprite_frames = SubResource("SpriteFrames_h0w5c")
+sprite_frames = SubResource("SpriteFrames_hu84i")
+
+[node name="Area2D" type="Area2D" parent="PlayerSprite/Bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/Bubble/Area2D"]
+position = Vector2(34.9998, 1)
+scale = Vector2(100, 100)
+shape = SubResource("CircleShape2D_uvw3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2, 1.2)
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="FishCollision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_76fy2")
