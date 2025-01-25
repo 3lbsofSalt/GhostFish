@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
 [ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
 [ext_resource type="Script" path="res://scenes/minimap.gd" id="7_8oqas"]
-[ext_resource type="PackedScene" uid="uid://4u3lbbx78ycl" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
+[ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
 

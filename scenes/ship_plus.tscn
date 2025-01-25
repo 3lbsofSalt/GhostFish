@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="4_vvf7c"]
 
 [node name="ShipPlus" type="Sprite2D"]
-self_modulate = Color(0.266667, 0.482353, 0.290196, 1)
+self_modulate = Color(0.266667, 0.317647, 0.223529, 1)
 z_index = -3
 texture = ExtResource("1_27352")
 centered = false
