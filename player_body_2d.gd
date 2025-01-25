@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
+const SPEED = 600.0
 
 @onready var playerSprite = $PlayerSprite;
 var alive = true;

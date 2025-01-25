@@ -1,0 +1,101 @@
+[gd_scene load_steps=2 format=3 uid="uid://btifpkofa1gj0"]
+
+[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="1_uk5mo"]
+
+[node name="CrateWall" type="Node2D"]
+
+[node name="Crate" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 50)
+
+[node name="Crate2" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 100)
+
+[node name="Crate3" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 150)
+
+[node name="Crate4" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 200)
+
+[node name="Crate5" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 450)
+
+[node name="Crate6" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 500)
+
+[node name="Crate7" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 550)
+
+[node name="Crate8" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(50, 600)
+
+[node name="Crate9" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 50)
+
+[node name="Crate10" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 100)
+
+[node name="Crate11" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 150)
+
+[node name="Crate12" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 200)
+
+[node name="Crate13" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 450)
+
+[node name="Crate14" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 500)
+
+[node name="Crate15" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 550)
+
+[node name="Crate16" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1102, 600)
+
+[node name="Crate17" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(125, 50)
+
+[node name="Crate18" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(200, 50)
+
+[node name="Crate19" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(275, 50)
+
+[node name="Crate20" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(350, 50)
+
+[node name="Crate21" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1027, 50)
+
+[node name="Crate22" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(952, 50)
+
+[node name="Crate23" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(877, 50)
+
+[node name="Crate24" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(802, 50)
+
+[node name="Crate25" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(125, 600)
+
+[node name="Crate26" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(200, 600)
+
+[node name="Crate27" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(275, 600)
+
+[node name="Crate28" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(350, 600)
+
+[node name="Crate29" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(1027, 600)
+
+[node name="Crate30" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(952, 600)
+
+[node name="Crate31" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(877, 600)
+
+[node name="Crate32" parent="." instance=ExtResource("1_uk5mo")]
+position = Vector2(802, 600)
