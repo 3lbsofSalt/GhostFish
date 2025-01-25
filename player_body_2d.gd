@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 400.0
 
-@onready var playerSprite = $CollisionShape2D/PlayerSprite;
+@onready var playerSprite = $PlayerSprite;
 var alive = true;
 
 func get_input():

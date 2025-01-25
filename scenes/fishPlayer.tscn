@@ -3,8 +3,6 @@
 [ext_resource type="Script" path="res://player_body_2d.gd" id="1_ddrnt"]
 [ext_resource type="Texture2D" uid="uid://jpm2qp473nqu" path="res://Assets/open_mouth.png" id="2_c5wfd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_76fy2"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vsxg"]
 atlas = ExtResource("2_c5wfd")
 region = Rect2(0, 0, 64, 64)
@@ -38,7 +36,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -55,14 +53,19 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76fy2"]
 
 [node name="PlayerBody2D" type="CharacterBody2D" groups=["Fish"]]
 script = ExtResource("1_ddrnt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_76fy2")
-
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="CollisionShape2D"]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rnjlx")
+animation = &"run"
+frame_progress = 0.438554
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.2, 1.2)
+shape = SubResource("RectangleShape2D_76fy2")

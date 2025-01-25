@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnoxhliavei67"]
+
+[ext_resource type="Shader" path="res://fog.gdshader" id="1_t0r6t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1w3k2"]
+shader = ExtResource("1_t0r6t")
+shader_parameter/speed = Vector2(0.1, 0.1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a2t0p"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vpifj"]
+width = 1152
+height = 648
+seamless = true
+noise = SubResource("FastNoiseLite_a2t0p")
+
+[node name="Fog" type="Sprite2D"]
+z_index = 4
+z_as_relative = false
+material = SubResource("ShaderMaterial_1w3k2")
+position = Vector2(3456, 3888)
+texture = SubResource("NoiseTexture2D_vpifj")
+centered = false
