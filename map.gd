@@ -57,6 +57,7 @@ func _process(delta: float) -> void:
 	if GameState.is_running() and GameState.pearls_collected == 3 and not threePearlsFound:
 		print("3 PEARLS!")
 		threePearlsFound = true
+		$boss_room.play("readyForBoss")
 	
 func convertTwoDimsToOne(row, col):
 	return SHIP_DIMENSION * row + col

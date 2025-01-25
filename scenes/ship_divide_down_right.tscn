@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://brrfns8v33se"]
 
-[ext_resource type="Texture2D" uid="uid://dd67w6gcfio4q" path="res://Assets/woodBackdrop.png" id="1_1ae64"]
+[ext_resource type="Texture2D" uid="uid://c2sar10s3rtg6" path="res://Assets/plankWood.png" id="1_vjf43"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_3povx"]
 [ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_6o4at"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="4_rmwn0"]
 
 [node name="ShipDivideDownRight" type="Sprite2D"]
-self_modulate = Color(1, 0.196078, 1, 1)
+self_modulate = Color(0.439216, 0.427451, 0.513726, 1)
 z_index = -3
-texture = ExtResource("1_1ae64")
+texture = ExtResource("1_vjf43")
 centered = false
 
 [node name="Fog" parent="." instance=ExtResource("2_3povx")]

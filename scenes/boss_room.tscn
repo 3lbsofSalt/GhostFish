@@ -1,14 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl8kdk46smn6"]
+[gd_scene load_steps=8 format=3 uid="uid://cl8kdk46smn6"]
 
+[ext_resource type="Texture2D" uid="uid://v6sytt5nuw61" path="res://Assets/pearlMessage.png" id="1_554u8"]
 [ext_resource type="Texture2D" uid="uid://bl7emf2b3rqio" path="res://Assets/bossFloor.png" id="1_qvtev"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_mpfjr"]
 [ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_ceada"]
+[ext_resource type="Script" path="res://boss_room.gd" id="3_fvarc"]
 [ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="4_33fia"]
 
-[node name="bossRoom" type="Sprite2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvrr6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_554u8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qvtev")
+}],
+"loop": true,
+"name": &"readyForBoss",
+"speed": 5.0
+}]
+
+[node name="bossRoom" type="AnimatedSprite2D"]
 z_index = -3
-texture = ExtResource("1_qvtev")
+sprite_frames = SubResource("SpriteFrames_yvrr6")
+animation = &"readyForBoss"
 centered = false
+script = ExtResource("3_fvarc")
 
 [node name="Fog" parent="." instance=ExtResource("2_mpfjr")]
 position = Vector2(0, 0)
