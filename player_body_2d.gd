@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @export var speed = 600.0;
 
-@export var bubble_start_size = 0.01;
-@export var bubble_growth_rate = 0.01;
+@export var bubble_start_size: Vector2 = Vector2(0.01, 0.01);
+@export var bubble_growth_rate: Vector2 = Vector2(0.0005, 0.0005);
 const SPEED = 600.0
 
 @onready var playerSprite = $PlayerSprite;
@@ -20,15 +20,15 @@ func get_input():
 		return;
 
 	if MouthDetection.mouth_open:
+		playerSprite.play('open')
 		blowing_bubble = true;
 		bubble.visible = true;
-		playerSprite.play('open')
-		bubble.visible = true;
+
 	else:
+		playerSprite.play('closed')
 		blowing_bubble = false;
 		bubble.visible = false;
-		playerSprite.play('closed')
-		bubble.visible = false;
+		bubble.scale = bubble_start_size;
 
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction *  speed;
@@ -38,9 +38,10 @@ func get_input():
 		else:
 			playerSprite.flip_h = true;
 
-		
 func _physics_process(_delta):
 	get_input()
+	if blowing_bubble:
+		bubble.scale = bubble.scale + bubble_growth_rate;
 	move_and_slide()
 	
 func getPosition():
