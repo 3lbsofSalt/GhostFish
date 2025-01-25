@@ -130,4 +130,3 @@ func _on_bubble_animation_finished() -> void:
 
 		bubble.scale = bubble_start_size;
 		self.speed = self.initial_speed
-
