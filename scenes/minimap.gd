@@ -3,10 +3,14 @@ extends GridContainer
 # -1 Undiscovered,
 # 0 Discovered (generic room)
 # 4 Player Position
+# 7 Pearl Room
+# 8 Boss Room
 const color_by_type = { 
+	-2: '#1E88E5',
 	-1: 'e0e0e0',
 	0: '#a1a1a1', 
-	4: '#1E88E5'
+	7: '#F44336',
+	8: '#8BC34A',
 }
 var map_discovered = [-1, -1, -1, -1, -1, -1, -1, 
 					  -1, -1, -1, -1, -1, -1, -1, 
@@ -24,15 +28,19 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	for i in range(0, len(map_discovered)):
-		if map_discovered[i] == 4:
-			map_discovered[i] = 0;
+		if map_discovered[i] == -2:
+			print(%Map.roomList[i]);
+			if %Map.roomList[i] == 8:
+				map_discovered[i] = 8;
+			elif %Map.roomList[i] == 7:
+				map_discovered[i] = 7;
+			else:
+				map_discovered[i] = 0;
 
 		var playerPosition: Vector2 = %Camera.current_frame_num;
-		print(playerPosition);
 		var square = playerPosition.y * 7 + playerPosition.x;
 		if square < 49:
-			print(square);
-			map_discovered[square] = 4;
+			map_discovered[square] = -2;
 		colorMap();
 
 func colorMap() -> void:
