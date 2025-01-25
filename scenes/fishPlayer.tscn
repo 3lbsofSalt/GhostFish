@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://c6ripmd2conqx"]
-=======
-[gd_scene load_steps=17 format=3 uid="uid://c6ripmd2conqx"]
->>>>>>> 97f704a (Fixed collision)
 
 [ext_resource type="Script" path="res://player_body_2d.gd" id="1_ddrnt"]
 [ext_resource type="Texture2D" uid="uid://h7fpsup17gi7" path="res://Assets/close_mouth.png" id="3_g73iv"]
@@ -76,37 +72,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ck63w"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76fy2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oklxj"]
-
-[node name="Fish" type="CharacterBody2D" groups=["Fish"]]
+[node name="PlayerBody2D" type="CharacterBody2D" groups=["Fish"]]
 script = ExtResource("1_ddrnt")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rnjlx")
-<<<<<<< HEAD
 frame_progress = 0.173867
-=======
-animation = &"open"
-
-[node name="Bubble" type="AnimatedSprite2D" parent="PlayerSprite"]
-unique_name_in_owner = true
-position = Vector2(33, 3)
-scale = Vector2(0.01, 0.01)
-sprite_frames = SubResource("SpriteFrames_h0w5c")
->>>>>>> 97f704a (Fixed collision)
-
-[node name="Area2D" type="Area2D" parent="PlayerSprite/Bubble"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/Bubble/Area2D"]
-scale = Vector2(100, 100)
-shape = SubResource("CircleShape2D_ck63w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.2, 1.2)
-<<<<<<< HEAD
 shape = SubResource("RectangleShape2D_76fy2")
-=======
-shape = SubResource("RectangleShape2D_oklxj")
->>>>>>> 97f704a (Fixed collision)
