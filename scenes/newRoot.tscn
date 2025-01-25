@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
+[ext_resource type="Script" path="res://score.gd" id="5_050st"]
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
@@ -35,10 +36,10 @@ script = ExtResource("3_nlxba")
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera"]
 z_index = 100
-offset_left = 936.0
-offset_top = 22.0
-offset_right = 1434.0
-offset_bottom = 65.0
+offset_left = 907.0
+offset_top = 24.0
+offset_right = 1405.0
+offset_bottom = 67.0
 scale = Vector2(0.409258, 0.607211)
 theme_override_styles/background = SubResource("StyleBoxFlat_722p6")
 max_value = 10.0
@@ -47,6 +48,15 @@ value = 10.0
 show_percentage = false
 script = ExtResource("6_eivrp")
 
+[node name="Label" type="Label" parent="Camera"]
+offset_left = 906.0
+offset_top = 63.0
+offset_right = 1277.0
+offset_bottom = 200.0
+scale = Vector2(0.384973, 0.311893)
+theme_override_font_sizes/font_size = 100
+text = "score: 0"
+script = ExtResource("5_050st")
 [node name="Spawner4" parent="Camera" instance=ExtResource("7_hlkdp")]
 position = Vector2(1100, -64)
 
