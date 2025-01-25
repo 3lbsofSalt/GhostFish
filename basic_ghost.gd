@@ -26,6 +26,7 @@ func die() -> void:
 
 func take_damage(damage = 1) -> void:
 	health -= damage;
+	$GhostGetsHit.play();
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

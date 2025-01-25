@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 var boss_spawned = false;
 var butler_scene = preload("res://scenes/LungeGuy.tscn")

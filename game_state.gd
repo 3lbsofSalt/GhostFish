@@ -5,6 +5,13 @@ var pearls_collected = 0;
 var enemy_speed_mean = 300;
 var enemy_speed_std = 100;
 var boss_defeated = false;
+var spawn_rate: float = 50;
+
+func enemies_should_spawn() -> bool:
+	if %Map and %Map.has_method('player_in_ship'):
+		return %Map.player_in_ship()
+	else:
+		return true;
 
 func is_running() -> bool:
 	var players: Array[Node] = get_tree().get_nodes_in_group('Fish');

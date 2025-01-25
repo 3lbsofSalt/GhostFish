@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvkuhki4jn2i5"]
+[gd_scene load_steps=10 format=3 uid="uid://cvkuhki4jn2i5"]
 
 [ext_resource type="Script" path="res://basic_ghost.gd" id="1_3dhjh"]
 [ext_resource type="Texture2D" uid="uid://ctor13gyhp2v3" path="res://Assets/ghost_fish.png" id="2_hjam2"]
+[ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="3_nod51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tx3y7"]
 size = Vector2(18, 18)
@@ -53,5 +54,8 @@ shape = SubResource("RectangleShape2D_tx3y7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Ghost"]]
 z_index = 99
 sprite_frames = SubResource("SpriteFrames_i4r4u")
+
+[node name="GhostGetsHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nod51")
 
 [connection signal="body_entered" from="." to="." method="_on_collide"]
