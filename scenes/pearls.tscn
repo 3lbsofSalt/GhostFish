@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://0efdl5j2km8d"]
+[gd_scene load_steps=10 format=3 uid="uid://pgjlehl8lfic"]
 
-[ext_resource type="Texture2D" uid="uid://bedm74clhj8fg" path="res://Assets/shell.png" id="1_ukyeh"]
-[ext_resource type="Texture2D" uid="uid://b2uqouerx18gc" path="res://Assets/pearl_in_shell.png" id="2_y52cc"]
+[ext_resource type="Texture2D" uid="uid://dtdq2m2dj1rmx" path="res://Assets/shell.png" id="1_ukyeh"]
+[ext_resource type="Texture2D" uid="uid://dsobip515uefs" path="res://Assets/pearl_in_shell.png" id="2_y52cc"]
 [ext_resource type="Script" path="res://scenes/pearls.gd" id="3_foha0"]
 [ext_resource type="Script" path="res://pearlArea.gd" id="4_uywkq"]
+[ext_resource type="AudioStream" uid="uid://bjwki1wk28xle" path="res://sounds/collectGem.mp3" id="5_tlsu3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_watq7"]
 atlas = ExtResource("1_ukyeh")
@@ -37,6 +38,7 @@ size = Vector2(21, 21)
 
 [node name="Pearls" type="AnimatedSprite2D"]
 z_index = -2
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_xe5xe")
 script = ExtResource("3_foha0")
 
@@ -46,5 +48,8 @@ script = ExtResource("4_uywkq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 7)
 shape = SubResource("RectangleShape2D_hhtka")
+
+[node name="GetPearl" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tlsu3")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
