@@ -91,6 +91,7 @@ animations = [{
 
 [node name="PlayerBody2D" type="CharacterBody2D" groups=["Fish"]]
 script = ExtResource("1_ddrnt")
+speed = null
 bubble_start_size = null
 bubble_growth_rate = null
 
@@ -105,9 +106,10 @@ position = Vector2(34, 2)
 scale = Vector2(0.01, 0.01)
 sprite_frames = SubResource("SpriteFrames_hu84i")
 
-[node name="Area2D" type="Area2D" parent="PlayerSprite/Bubble"]
+[node name="BubbleArea" type="Area2D" parent="PlayerSprite/Bubble"]
+unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/Bubble/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/Bubble/BubbleArea"]
 position = Vector2(34.9998, 1)
 scale = Vector2(100, 100)
 shape = SubResource("CircleShape2D_uvw3w")

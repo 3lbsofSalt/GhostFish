@@ -3,13 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://c6ripmd2conqx" path="res://scenes/fishPlayer.tscn" id="1_s4bfd"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_avy68"]
 [ext_resource type="Script" path="res://camera.gd" id="3_nlxba"]
-[ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="5_5xgfe"]
+[ext_resource type="PackedScene" path="res://scenes/crate.tscn" id="5_5xgfe"]
 [ext_resource type="PackedScene" uid="uid://cet3kt5o404rf" path="res://scenes/map.tscn" id="5_8sjng"]
 
 [node name="NewRoot" type="Node2D"]
 
 [node name="PlayerBody2D" parent="." instance=ExtResource("1_s4bfd")]
-position = Vector2(4032, 5298)
+position = Vector2(4032, 5500)
+speed = null
 
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
 

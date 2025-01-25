@@ -27,10 +27,8 @@ func _ready():
 func _process(delta):
 	# Read the mouth state from the file
 	var file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
-	print(file)
 	if file:
 		var mouth_state = file.get_as_text()
-		print(mouth_state)
 		file.close()
 
 		# Example: Use mouth state in the game
