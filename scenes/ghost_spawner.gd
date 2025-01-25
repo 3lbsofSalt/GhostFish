@@ -20,7 +20,7 @@ func _on_spawn_timer_timeout() -> void:
 		print("FISH")
 		var enemy: Node2D = spawn.instantiate();
 		enemy.global_position = global_position;
-		var speed = random_normal(enemy.speed_mean, enemy.speed_std)
+		var speed = max(random_normal(GameState.enemy_speed_mean, GameState.enemy_speed_std), 10)
 		enemy.speed = speed
 		# enemy.global_position = global_position;
 		get_tree().root.add_child(enemy);
