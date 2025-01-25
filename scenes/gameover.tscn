@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://clhyoh1w38s02"]
+[gd_scene load_steps=8 format=3 uid="uid://clhyoh1w38s02"]
 
 [ext_resource type="Script" path="res://button.gd" id="1_q5lua"]
+[ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="2_ijl47"]
+[ext_resource type="Texture2D" uid="uid://j3di6qyrtri0" path="res://Assets/fontbolt.png" id="2_l2mtx"]
+[ext_resource type="Texture2D" uid="uid://77jhrijhbwd2" path="res://Assets/moutbetter.png" id="3_e6cfv"]
+[ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="5_0qo61"]
+[ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="6_x8q52"]
+[ext_resource type="Script" path="res://exit_game_button.gd" id="7_k31jh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,20 +15,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.145
-anchor_top = 0.14
-anchor_right = 0.149
-anchor_bottom = 0.145
-offset_left = 198.96
-offset_top = 209.28
-offset_right = 607.352
-offset_bottom = 234.04
-text = "GAME OVER, OPEN  YOUR MOUTH BETTER NEXT TIME."
-horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -35,7 +27,47 @@ offset_left = -0.144012
 offset_top = -0.128021
 offset_right = -0.0320435
 offset_bottom = 0.0559998
-text = "Restart"
 script = ExtResource("1_q5lua")
 
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(80, 38)
+scale = Vector2(0.193089, 0.264045)
+texture = ExtResource("2_ijl47")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(585, 205)
+scale = Vector2(1.18217, 1.3427)
+texture = ExtResource("2_l2mtx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(573, 344)
+scale = Vector2(0.359867, 0.379213)
+texture = ExtResource("3_e6cfv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579.75, 321.5)
+scale = Vector2(1.79238, 1.45928)
+texture = ExtResource("5_0qo61")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.422
+anchor_top = 0.793
+anchor_right = 0.566
+anchor_bottom = 0.91
+offset_left = -0.143982
+offset_top = 0.135986
+offset_right = -0.0320435
+offset_bottom = 0.320007
+script = ExtResource("1_q5lua")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button2"]
+position = Vector2(80, 38)
+scale = Vector2(0.193089, 0.264045)
+texture = ExtResource("6_x8q52")
+script = ExtResource("7_k31jh")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
