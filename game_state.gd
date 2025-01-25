@@ -10,6 +10,7 @@ func is_running() -> bool:
 	if players_alive > 0:
 		return true;
 	else:
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 		return false;
 
 # Called when the node enters the scene tree for the first time.
