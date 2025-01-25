@@ -1,55 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cet3kt5o404rf"]
+[gd_scene load_steps=4 format=3 uid="uid://cet3kt5o404rf"]
 
+[ext_resource type="Script" path="res://map.gd" id="1_sijjy"]
 [ext_resource type="PackedScene" uid="uid://6lcbfp8vjcvy" path="res://scenes/map_start.tscn" id="1_td86r"]
 [ext_resource type="PackedScene" uid="uid://crcru8a8yb2hf" path="res://scenes/entrance.tscn" id="2_qcgyh"]
-[ext_resource type="PackedScene" uid="uid://qw460yuqgkgg" path="res://scenes/ship_empty.tscn" id="2_w0xdv"]
-[ext_resource type="PackedScene" uid="uid://brrfns8v33se" path="res://scenes/ship_divide_down_right.tscn" id="4_0fpyj"]
-[ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="4_3350b"]
-[ext_resource type="PackedScene" uid="uid://beye8hufb4xo6" path="res://scenes/ship_plus.tscn" id="5_a7kch"]
-[ext_resource type="PackedScene" uid="uid://bq46fgcitu5ol" path="res://scenes/ship_divide_up_right.tscn" id="6_bsrf5"]
-[ext_resource type="PackedScene" uid="uid://bxqiqgmqi6duu" path="res://scenes/ship_zig_zag_up.tscn" id="6_udmpk"]
-[ext_resource type="PackedScene" uid="uid://hmqfb7p0ss3k" path="res://scenes/ship_scattered.tscn" id="8_vytew"]
-[ext_resource type="PackedScene" uid="uid://20ddnakjon5s" path="res://scenes/ship_zig_zag_side.tscn" id="10_6s8yu"]
 
 [node name="Map" type="Node2D"]
+script = ExtResource("1_sijjy")
 
 [node name="START" parent="." instance=ExtResource("1_td86r")]
 
 [node name="ENTRANCE" parent="." instance=ExtResource("2_qcgyh")]
 position = Vector2(3456, 4536)
-
-[node name="ShipEmpty" parent="." instance=ExtResource("2_w0xdv")]
-position = Vector2(0, 3888)
-
-[node name="ShipDivideDownRight" parent="." instance=ExtResource("4_0fpyj")]
-position = Vector2(1152, 3888)
-
-[node name="ShipEmpty3" parent="." instance=ExtResource("2_w0xdv")]
-position = Vector2(2304, 3888)
-
-[node name="ShipPlus" parent="." instance=ExtResource("5_a7kch")]
-position = Vector2(3456, 3888)
-
-[node name="ShipPlus2" parent="." instance=ExtResource("5_a7kch")]
-position = Vector2(0, 3240)
-
-[node name="ShipZigZagUp" parent="." instance=ExtResource("6_udmpk")]
-position = Vector2(4608, 3888)
-
-[node name="ShipZigZagUp2" parent="." instance=ExtResource("6_udmpk")]
-position = Vector2(0, 2592)
-
-[node name="ShipDivideUpRight" parent="." instance=ExtResource("6_bsrf5")]
-position = Vector2(5760, 3888)
-
-[node name="ShipScattered" parent="." instance=ExtResource("8_vytew")]
-position = Vector2(6912, 3888)
-
-[node name="ShipScattered2" parent="." instance=ExtResource("8_vytew")]
-position = Vector2(1152, 3240)
-
-[node name="Fog" parent="." instance=ExtResource("4_3350b")]
-position = Vector2(1152, 3888)
-
-[node name="ShipZigZagSide" parent="." instance=ExtResource("10_6s8yu")]
-position = Vector2(3456, 3240)
