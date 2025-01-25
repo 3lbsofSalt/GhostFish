@@ -39,11 +39,10 @@ func die() -> void:
 
 func take_damage(damage = 1) -> void:
 	health -= damage;
-	print("hit")
 	modulate = Color(1, .5, .5, 1);
 	var hitTween = create_tween();
 	hitTween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), .25);
-
+	#print("BUTLER HEALTH ", health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -73,5 +72,4 @@ func isOnScreen():
 	var goodY = global_position.y > camera.position.y and global_position.y < camera.position.y + SCREEN_HEIGHT;
 	if goodX and goodY:
 		onScreen = true;
-	print(onScreen)
 	return onScreen;

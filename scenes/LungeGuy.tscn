@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf7jsuaan6580"]
+[gd_scene load_steps=11 format=3 uid="uid://cf7jsuaan6580"]
 
 [ext_resource type="Script" path="res://lunge_guy.gd" id="1_i36d0"]
 [ext_resource type="Texture2D" uid="uid://d3xqbwdl7nvci" path="res://Assets/LungingGhost.png" id="2_6dnbm"]
+[ext_resource type="Script" path="res://butler_progress_bar.gd" id="3_uidoe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6v06"]
 atlas = ExtResource("2_6dnbm")
@@ -54,9 +55,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3jyy"]
+bg_color = Color(0.77745, 0.0857154, 0.134336, 1)
+
 [node name="Area2D" type="Area2D" groups=["Ghost"]]
 scale = Vector2(10, 10)
 script = ExtResource("1_i36d0")
+health = 100.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["Ghost"]]
 position = Vector2(0, -0.0350533)
@@ -75,6 +80,18 @@ animation = &"t-pose"
 unique_name_in_owner = true
 wait_time = 3.0
 autostart = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -0.600001
+offset_top = 6.9
+offset_right = 298.4
+offset_bottom = 89.9
+scale = Vector2(0.0398351, 0.0229071)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/background = SubResource("StyleBoxFlat_p3jyy")
+value = 10.0
+show_percentage = false
+script = ExtResource("3_uidoe")
 
 [connection signal="body_entered" from="." to="." method="_on_collide"]
 [connection signal="timeout" from="StateTimer" to="." method="_update_state"]

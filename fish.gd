@@ -1,5 +1,8 @@
 extends CharacterBody2D;
-
+@export var bubble_size_damage_factor: float = (1000/8);
+@export var min_speed: float = 100;
+@export var bubble_slow_down_factor: float = 20;
+@export var initial_speed: float = 600;
 @export var speed: float = 600.0;
 @export var bubble_start_size: Vector2 = Vector2(0.01, 0.01);
 @export var bubble_growth_rate: Vector2 = Vector2(0.0005, 0.0005);
@@ -41,7 +44,7 @@ func get_input():
 			emit_signal("bubblePopSig");
 			blowing_bubble = false;
 			bubbleGrowSoundPlaying = false;
-			bubble.scale = bubble_start_size;
+			#bubble.scale = bubble_start_size;
 			# Reset Bubble Position
 			if playerSprite.flip_h:
 				bubble.position = Vector2(-34, 2);
@@ -50,7 +53,11 @@ func get_input():
 			# Handle Collisions
 			for collision in bubbleArea.get_overlapping_areas():
 				if collision.is_in_group('Ghost') and collision.has_method('take_damage'):
-					collision.take_damage();
+					collision.take_damage(bubble.scale[0]*self.bubble_size_damage_factor);
+					
+			bubble.scale = bubble_start_size;
+			self.speed = self.initial_speed
+			
 
 
 
@@ -80,6 +87,7 @@ func _physics_process(_delta):
 		else:
 			bubble.position += bubble_offset;
 		bubble.scale = bubble.scale + bubble_growth_rate;
+		self.speed =  max(self.speed - (bubble.scale[0] * self.bubble_slow_down_factor), self.min_speed) 
 
 	move_and_slide()
 	
