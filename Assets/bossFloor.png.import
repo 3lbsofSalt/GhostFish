@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlgyjvqkfmsyo"
-path="res://.godot/imported/bubble_sprite.png-a8bab83605ab564261af2b9541e32684.ctex"
+uid="uid://bl7emf2b3rqio"
+path="res://.godot/imported/bossFloor.png-7c094adfa4fff25df69414ff4ff8dd52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bubble_sprite.png"
-dest_files=["res://.godot/imported/bubble_sprite.png-a8bab83605ab564261af2b9541e32684.ctex"]
+source_file="res://Assets/bossFloor.png"
+dest_files=["res://.godot/imported/bossFloor.png-7c094adfa4fff25df69414ff4ff8dd52.ctex"]
 
 [params]
 

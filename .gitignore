@@ -4,3 +4,4 @@
 env/
 mouth_open.txt
 .DS_store
+*.import

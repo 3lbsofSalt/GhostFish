@@ -9,7 +9,11 @@
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bxvt6ntnxgqs8" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
+=======
+[ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
+>>>>>>> master
 [ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
