@@ -13,6 +13,13 @@ var current_frame_num = Vector2(0,0)
 func _ready() -> void:
 	pass
 
+func player_in_ship() -> bool:
+	if current_frame_num.x < 0 or current_frame_num.x > 6:
+		return false;
+	elif current_frame_num.y < 0 or current_frame_num.y > 6:
+		return false;
+	else:
+		return true;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

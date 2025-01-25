@@ -29,7 +29,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	for i in range(0, len(map_discovered)):
 		if map_discovered[i] == -2:
-			print(%Map.roomList[i]);
 			if %Map.roomList[i] == 8:
 				map_discovered[i] = 8;
 			elif %Map.roomList[i] == 7:

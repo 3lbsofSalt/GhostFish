@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://4u3lbbx78ycl"]
+[gd_scene load_steps=3 format=3 uid="uid://ik35br4lkvid"]
 
 [ext_resource type="Script" path="res://scenes/ghost_spawner.gd" id="1_iwyty"]
 [ext_resource type="PackedScene" uid="uid://cvkuhki4jn2i5" path="res://scenes/BasicGhost.tscn" id="2_j2awl"]

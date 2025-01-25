@@ -9,9 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://chphlcxmxljf5" path="res://sounds/BubblePop.mp3" id="6_4d43d"]
 [ext_resource type="Script" path="res://progress_bar.gd" id="6_eivrp"]
 [ext_resource type="Script" path="res://sound_manager.gd" id="6_flp0c"]
-[ext_resource type="PackedScene" uid="uid://cf7jsuaan6580" path="res://scenes/LungeGuy.tscn" id="6_sxryn"]
+[ext_resource type="PackedScene" uid="uid://ik35br4lkvid" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="Script" path="res://scenes/minimap.gd" id="7_8oqas"]
-[ext_resource type="PackedScene" path="res://scenes/GhostSpawner.tscn" id="7_hlkdp"]
 [ext_resource type="AudioStream" uid="uid://c13gte28brojp" path="res://sounds/bubbleGrow.mp3" id="8_c543e"]
 [ext_resource type="AudioStream" uid="uid://yplgomxx3sl3" path="res://sounds/ghostKill.mp3" id="9_4ggjb"]
 [ext_resource type="AudioStream" uid="uid://cwepgasbha1pl" path="res://sounds/mainHauntedMusic.mp3" id="15_6pwsi"]
@@ -61,42 +60,6 @@ scale = Vector2(0.384973, 0.311893)
 theme_override_font_sizes/font_size = 100
 text = "score: 0"
 script = ExtResource("5_050st")
-
-[node name="Spawner4" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1100, -64)
-
-[node name="Spawner" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(-65, -44)
-
-[node name="Spawner2" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(-67, 74)
-
-[node name="Spawner3" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(45, -48)
-
-[node name="Spawner5" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1207, -58)
-
-[node name="Spawner6" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1214, 37)
-
-[node name="Spawner7" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1209, 606)
-
-[node name="Spawner8" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1211, 696)
-
-[node name="Spawner9" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(1100, 709)
-
-[node name="Spawner10" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(42, 721)
-
-[node name="Spawner11" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(-58, 605)
-
-[node name="Spawner12" parent="Camera" instance=ExtResource("7_hlkdp")]
-position = Vector2(-58, 711)
 
 [node name="Label2" type="Label" parent="Camera"]
 z_index = 999
@@ -403,15 +366,6 @@ stream = ExtResource("8_c543e")
 
 [node name="GhostKill" type="AudioStreamPlayer" parent="SoundManager"]
 stream = ExtResource("9_4ggjb")
-
-[node name="Area2D2" parent="." instance=ExtResource("6_sxryn")]
-position = Vector2(4140, 5506)
-
-[node name="GhostSpawner" parent="." instance=ExtResource("7_hlkdp")]
-position = Vector2(3993, 5261)
-
-[node name="GhostSpawner2" parent="." instance=ExtResource("7_hlkdp")]
-position = Vector2(3368, 4942)
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_6pwsi")
