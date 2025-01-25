@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="GhostFish"
-run/main_scene="res://Root.tscn"
+run/main_scene="res://scenes/newRoot.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MouthDetection="*res://mouth_detection.gd"
+[global_group]
+
+BasicGhost="Group for BasicGhost Enemies"
+Fish="Global Player Group"
 
 [input]
 
