@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://btifpkofa1gj0"]
+[gd_scene load_steps=3 format=3 uid="uid://btifpkofa1gj0"]
 
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="1_uk5mo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgva7"]
+size = Vector2(84, 38)
 
 [node name="CrateWall" type="Node2D"]
 
@@ -99,3 +102,13 @@ position = Vector2(877, 600)
 
 [node name="Crate32" parent="." instance=ExtResource("1_uk5mo")]
 position = Vector2(802, 600)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(350, 20)
+shape = SubResource("RectangleShape2D_jgva7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(802, 20)
+shape = SubResource("RectangleShape2D_jgva7")
