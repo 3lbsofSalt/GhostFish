@@ -39,7 +39,8 @@ func get_input():
 		velocity.x = 0; velocity.y = 0;
 		return;
 
-	if MouthDetection.mouth_open:
+	# "and (bubble.scale == bubble_start_size or blowing_bubble)" prevents the mouth spam exploit
+	if MouthDetection.mouth_open and (bubble.scale == bubble_start_size or blowing_bubble):
 		$PlayerSprite/Bubble.play('default');
 		playerSprite.play('open')
 		blowing_bubble = true;
