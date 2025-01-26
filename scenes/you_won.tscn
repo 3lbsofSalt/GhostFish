@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6w8ds45y6xf5"]
+[gd_scene load_steps=11 format=3 uid="uid://b6w8ds45y6xf5"]
 
 [ext_resource type="Texture2D" uid="uid://bxe5iaiqqtoty" path="res://Assets/victory.png" id="1_btjtj"]
 [ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="2_qj8c2"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="4_m6a1v"]
 [ext_resource type="Script" path="res://restart_button.gd" id="5_dlip8"]
 [ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="6_kjyll"]
-[ext_resource type="AudioStream" uid="uid://bhkw7iaiuy8cv" path="res://sounds/victory.mp3" id="7_l13au"]
+[ext_resource type="AudioStream" uid="uid://dccq7nx36fnm4" path="res://sounds/victory.mp3" id="7_l13au"]
+[ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="8_jquyr"]
+[ext_resource type="Script" path="res://final_score.gd" id="10_h6e5d"]
 
 [sub_resource type="GDScript" id="GDScript_ivmq5"]
 script/source = "extends Sprite2D
@@ -80,6 +82,24 @@ texture = ExtResource("6_kjyll")
 [node name="Victory" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_l13au")
 autoplay = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(509, 324)
+scale = Vector2(0.641551, 0.632482)
+texture = ExtResource("8_jquyr")
+
+[node name="Label" type="Label" parent="Sprite2D4"]
+texture_filter = 1
+offset_left = 215.104
+offset_top = -90.1211
+offset_right = 443.104
+offset_bottom = 46.8789
+scale = Vector2(1.00193, 1.23086)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.929412, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "1000"
+script = ExtResource("10_h6e5d")
 
 [connection signal="pressed" from="exitgamebutton" to="exitgamebutton" method="_on_pressed"]
 [connection signal="pressed" from="restartbutton" to="restartbutton" method="_on_pressed"]

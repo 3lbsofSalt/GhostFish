@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://progress_bar.gd" id="8_ek65u"]
 [ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="9_oewjf"]
 [ext_resource type="Script" path="res://final_score.gd" id="10_kfncl"]
-[ext_resource type="AudioStream" uid="uid://bpm4ttx1ppsyx" path="res://sounds/game_over.mp3" id="11_7q3p3"]
+[ext_resource type="AudioStream" uid="uid://ck71rfyys7fsp" path="res://sounds/game_over.mp3" id="11_7q3p3"]
 
 [sub_resource type="GDScript" id="GDScript_ivmq5"]
 script/source = "extends Sprite2D

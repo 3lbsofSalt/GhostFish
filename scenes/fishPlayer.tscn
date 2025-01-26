@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://fish.gd" id="1_ddrnt"]
 [ext_resource type="Texture2D" uid="uid://jpm2qp473nqu" path="res://Assets/open_mouth.png" id="3_fglk3"]
 [ext_resource type="Texture2D" uid="uid://h7fpsup17gi7" path="res://Assets/close_mouth.png" id="3_g73iv"]
-[ext_resource type="AudioStream" uid="uid://ibklj8ysu0kj" path="res://sounds/takeDamage.mp3" id="4_vpe10"]
+[ext_resource type="AudioStream" uid="uid://do6gsjb1aw0a0" path="res://sounds/takeDamage.mp3" id="4_vpe10"]
 [ext_resource type="Texture2D" uid="uid://dlgyjvqkfmsyo" path="res://Assets/bubble_sprite.png" id="5_kepga"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cth2f"]
