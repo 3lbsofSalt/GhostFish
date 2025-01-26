@@ -14,4 +14,5 @@ func _on_pressed() -> void:
 	GameState.score = 0.0;
 	GameState.pearls_collected = 0;
 	GameState.enemy_speed_mean = 300;
+	GameState.boss_defeated = false;
 	get_tree().change_scene_to_file("res://scenes/newRoot.tscn")
