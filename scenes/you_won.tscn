@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6w8ds45y6xf5"]
+[gd_scene load_steps=11 format=3 uid="uid://b6w8ds45y6xf5"]
 
 [ext_resource type="Texture2D" uid="uid://bxe5iaiqqtoty" path="res://Assets/victory.png" id="1_btjtj"]
 [ext_resource type="Texture2D" uid="uid://cvafsclf572d3" path="res://Assets/background.png" id="2_qj8c2"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="6_kjyll"]
 [ext_resource type="AudioStream" uid="uid://dccq7nx36fnm4" path="res://sounds/victory.mp3" id="7_l13au"]
 [ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="8_jquyr"]
-[ext_resource type="Script" path="res://score.gd" id="9_gsdon"]
 [ext_resource type="Script" path="res://final_score.gd" id="10_h6e5d"]
 
 [sub_resource type="GDScript" id="GDScript_ivmq5"]
@@ -85,10 +84,9 @@ stream = ExtResource("7_l13au")
 autoplay = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(477, 323)
+position = Vector2(509, 324)
 scale = Vector2(0.641551, 0.632482)
 texture = ExtResource("8_jquyr")
-script = ExtResource("9_gsdon")
 
 [node name="Label" type="Label" parent="Sprite2D4"]
 texture_filter = 1
