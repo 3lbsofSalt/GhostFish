@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://animated_arrow.gd" id="5_tiwx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgnyt"]
-size = Vector2(32, 657)
+size = Vector2(37, 801.834)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6r0q"]
 atlas = ExtResource("4_47mqb")
@@ -169,7 +169,7 @@ position = Vector2(-20, 322.5)
 shape = SubResource("RectangleShape2D_vgnyt")
 
 [node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1170, 316.666)
+position = Vector2(1275, 389.083)
 shape = SubResource("RectangleShape2D_vgnyt")
 
 [node name="Ship" type="Sprite2D" parent="."]

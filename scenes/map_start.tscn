@@ -13,10 +13,10 @@
 [ext_resource type="Script" path="res://animated_arrow.gd" id="9_lte6n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prehs"]
-size = Vector2(38.3335, 1093.33)
+size = Vector2(38.3335, 1226.67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2r36u"]
-size = Vector2(1953.33, 31.6672)
+size = Vector2(2125, 31.6672)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6r0q"]
 atlas = ExtResource("8_6qpdg")
@@ -177,19 +177,19 @@ position = Vector2(194, 138)
 scale = Vector2(0.6, 0.6)
 
 [node name="Left" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-335.833, 316.666)
+position = Vector2(-335.833, 383.334)
 shape = SubResource("RectangleShape2D_prehs")
 
 [node name="Right" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1615, 316.666)
+position = Vector2(1800, 383.334)
 shape = SubResource("RectangleShape2D_prehs")
 
 [node name="Bottom" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(651.667, 862.499)
+position = Vector2(737.501, 980)
 shape = SubResource("RectangleShape2D_2r36u")
 
 [node name="AnimatedArrow" type="AnimatedSprite2D" parent="."]
-position = Vector2(575, 28)
+position = Vector2(640, 28)
 rotation = -1.5708
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_waehv")
@@ -208,7 +208,8 @@ centered = false
 
 [node name="Node2D" type="Node2D" parent="."]
 z_index = 4
-position = Vector2(20, 35)
+position = Vector2(0, 70)
+scale = Vector2(1.1, 1.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 z_index = 3

@@ -11,107 +11,107 @@
 script = ExtResource("1_sijjy")
 
 [node name="START" parent="." instance=ExtResource("1_td86r")]
-position = Vector2(3456, 5184)
+position = Vector2(3840, 5760)
 
 [node name="ENTRANCE" parent="." instance=ExtResource("2_qcgyh")]
-position = Vector2(3456, 4536)
+position = Vector2(3840, 5040)
 
 [node name="BorderBarrels" type="Node2D" parent="."]
-
-[node name="BottomBarrels" type="Node2D" parent="BorderBarrels"]
-position = Vector2(0, 4488)
-
-[node name="BarrelBlockSideways" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(2880, 0)
-
-[node name="BarrelBlockSideways2" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(1728, 0)
-
-[node name="BarrelBlockSideways3" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(576, 0)
-
-[node name="BarrelBlockSideways4" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(5184, 0)
-
-[node name="BarrelBlockSideways5" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(6336, 0)
-
-[node name="BarrelBlockSideways6" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(7488, 0)
 
 [node name="TopBarrels" type="Node2D" parent="BorderBarrels"]
 position = Vector2(0, 50)
 
 [node name="BarrelBlockSideways" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(2880, 0)
+position = Vector2(3200, 0)
 
 [node name="BarrelBlockSideways2" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(1728, 0)
+position = Vector2(1920, 0)
 
 [node name="BarrelBlockSideways3" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(576, 0)
+position = Vector2(640, 0)
 
 [node name="BarrelBlockSideways4" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(5184, 0)
+position = Vector2(5760, 0)
 
 [node name="BarrelBlockSideways5" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(6336, 0)
+position = Vector2(7040, 0)
 
 [node name="BarrelBlockSideways6" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(7488, 0)
+position = Vector2(8320, 0)
 
 [node name="BarrelBlockSideways7" parent="BorderBarrels/TopBarrels" instance=ExtResource("4_8fr2d")]
-position = Vector2(4032, 0)
+position = Vector2(4480, 0)
+
+[node name="BottomBarrels" type="Node2D" parent="BorderBarrels"]
+position = Vector2(0, 4980)
+
+[node name="BarrelBlockSideways" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(3200, 0)
+
+[node name="BarrelBlockSideways2" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(1920, 0)
+
+[node name="BarrelBlockSideways3" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(640, 0)
+
+[node name="BarrelBlockSideways4" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(5760, 0)
+
+[node name="BarrelBlockSideways5" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(7040, 0)
+
+[node name="BarrelBlockSideways6" parent="BorderBarrels/BottomBarrels" instance=ExtResource("4_8fr2d")]
+position = Vector2(8320, 0)
 
 [node name="LeftBarrels" type="Node2D" parent="BorderBarrels"]
 z_as_relative = false
 position = Vector2(50, 0)
 
 [node name="BarrelBlockVert" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 4197)
+position = Vector2(0, 4663)
 
 [node name="BarrelBlockVert2" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 3549)
+position = Vector2(0, 3943)
 
 [node name="BarrelBlockVert3" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 2901)
+position = Vector2(0, 3223)
 
 [node name="BarrelBlockVert4" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 2253)
+position = Vector2(0, 2503)
 
 [node name="BarrelBlockVert5" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 1605)
+position = Vector2(0, 1783)
 
 [node name="BarrelBlockVert6" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 957)
+position = Vector2(0, 1063)
 
 [node name="BarrelBlockVert7" parent="BorderBarrels/LeftBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(0, 309)
+position = Vector2(0, 343)
 
 [node name="RightBarrels" type="Node2D" parent="BorderBarrels"]
 z_as_relative = false
-position = Vector2(7964, 0)
+position = Vector2(8913, 0)
 
 [node name="BarrelBlockVert" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 4197)
+position = Vector2(0, 4663)
 
 [node name="BarrelBlockVert2" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 3549)
+position = Vector2(0, 3943)
 
 [node name="BarrelBlockVert3" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 2901)
+position = Vector2(0, 3223)
 
 [node name="BarrelBlockVert4" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 2253)
+position = Vector2(0, 2503)
 
 [node name="BarrelBlockVert5" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 1605)
+position = Vector2(0, 1783)
 
 [node name="BarrelBlockVert6" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 957)
+position = Vector2(0, 1063)
 
 [node name="BarrelBlockVert7" parent="BorderBarrels/RightBarrels" instance=ExtResource("5_4gftu")]
-position = Vector2(50, 309)
+position = Vector2(0, 343)
 
 [node name="Spawners" type="Node2D" parent="."]
 

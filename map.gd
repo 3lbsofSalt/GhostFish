@@ -1,22 +1,22 @@
 extends Node2D
 
 @onready var SHIP_DIMENSION = 7
-@onready var FRAME_WIDTH = 1152
-@onready var FRAME_HEIGHT = 648
+@onready var FRAME_WIDTH = get_viewport().get_visible_rect().size.x;
+@onready var FRAME_HEIGHT = get_viewport().get_visible_rect().size.y;
 
 # Called when the node enters the scene tree for the first time.
 
 @onready var threePearlsFound = false
 
-@onready var roomSceneEmpty = preload("res://scenes/ship_empty.tscn");
-@onready var roomScenePlus = preload("res://scenes/ship_plus.tscn");
-@onready var roomSceneScattered = preload("res://scenes/ship_scattered.tscn");
-@onready var roomSceneZigZagUp = preload("res://scenes/ship_zig_zag_up.tscn");
-@onready var roomSceneZigZagSide = preload("res://scenes/ship_zig_zag_side.tscn");
-@onready var roomSceneDivideUpRight = preload("res://scenes/ship_divide_up_right.tscn");
-@onready var roomSceneDivideDownRight = preload("res://scenes/ship_divide_down_right.tscn");
-@onready var roomSceneBoss = preload("res://scenes/boss_room.tscn");
-@onready var roomScenePearl = preload("res://scenes/pearl_room.tscn");
+@onready var roomSceneEmpty = preload("res://scenes/rooms/ship_empty.tscn");
+@onready var roomScenePlus = preload("res://scenes/rooms/ship_plus.tscn");
+@onready var roomSceneScattered = preload("res://scenes/rooms/ship_scattered.tscn");
+@onready var roomSceneZigZagUp = preload("res://scenes/rooms/ship_zig_zag_up.tscn");
+@onready var roomSceneZigZagSide = preload("res://scenes/rooms/ship_zig_zag_side.tscn");
+@onready var roomSceneDivideUpRight = preload("res://scenes/rooms/ship_divide_up_right.tscn");
+@onready var roomSceneDivideDownRight = preload("res://scenes/rooms/ship_divide_down_right.tscn");
+@onready var roomSceneBoss = preload("res://scenes/rooms/boss_room.tscn");
+@onready var roomScenePearl = preload("res://scenes/rooms/pearl_room.tscn");
 
 # ROOM CODES:
 # 0 = empty room

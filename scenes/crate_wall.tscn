@@ -7,101 +7,139 @@ size = Vector2(84, 38)
 
 [node name="CrateWall" type="Node2D"]
 
-[node name="Crate" parent="." instance=ExtResource("1_uk5mo")]
+[node name="TopLeft" type="Node2D" parent="."]
+
+[node name="Crate" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(50, 50)
 
-[node name="Crate2" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate2" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(50, 100)
 
-[node name="Crate3" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate3" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(50, 150)
 
-[node name="Crate4" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate4" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(50, 200)
 
-[node name="Crate5" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(50, 450)
-
-[node name="Crate6" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(50, 500)
-
-[node name="Crate7" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(50, 550)
-
-[node name="Crate8" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(50, 600)
-
-[node name="Crate9" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 50)
-
-[node name="Crate10" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 100)
-
-[node name="Crate11" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 150)
-
-[node name="Crate12" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 200)
-
-[node name="Crate13" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 450)
-
-[node name="Crate14" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 500)
-
-[node name="Crate15" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 550)
-
-[node name="Crate16" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1102, 600)
-
-[node name="Crate17" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate17" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(125, 50)
 
-[node name="Crate18" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate18" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(200, 50)
 
-[node name="Crate19" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate19" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(275, 50)
 
-[node name="Crate20" parent="." instance=ExtResource("1_uk5mo")]
+[node name="Crate20" parent="TopLeft" instance=ExtResource("1_uk5mo")]
 position = Vector2(350, 50)
 
-[node name="Crate21" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1027, 50)
+[node name="TopRight" type="Node2D" parent="."]
+position = Vector2(180, 50)
+scale = Vector2(0.5, 0.5)
 
-[node name="Crate22" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(952, 50)
+[node name="Crate9" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 0)
+scale = Vector2(1, 1)
 
-[node name="Crate23" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(877, 50)
+[node name="Crate10" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 100)
+scale = Vector2(1, 1)
 
-[node name="Crate24" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(802, 50)
+[node name="Crate11" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 200)
+scale = Vector2(1, 1)
 
-[node name="Crate25" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(125, 600)
+[node name="Crate12" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 300)
+scale = Vector2(1, 1)
 
-[node name="Crate26" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(200, 600)
+[node name="Crate21" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1954, 0)
+scale = Vector2(1, 1)
 
-[node name="Crate27" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(275, 600)
+[node name="Crate22" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1804, 0)
+scale = Vector2(1, 1)
 
-[node name="Crate28" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(350, 600)
+[node name="Crate23" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1654, 0)
+scale = Vector2(1, 1)
 
-[node name="Crate29" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(1027, 600)
+[node name="Crate24" parent="TopRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1504, 0)
+scale = Vector2(1, 1)
 
-[node name="Crate30" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(952, 600)
+[node name="BottomLeft" type="Node2D" parent="."]
+position = Vector2(50, 115)
+scale = Vector2(0.5, 0.5)
 
-[node name="Crate31" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(877, 600)
+[node name="Crate5" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(0, 800)
+scale = Vector2(1, 1)
 
-[node name="Crate32" parent="." instance=ExtResource("1_uk5mo")]
-position = Vector2(802, 600)
+[node name="Crate6" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(0, 900)
+scale = Vector2(1, 1)
+
+[node name="Crate7" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(0, 1000)
+scale = Vector2(1, 1)
+
+[node name="Crate8" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(0, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate25" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(150, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate26" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(300, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate27" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(450, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate28" parent="BottomLeft" instance=ExtResource("1_uk5mo")]
+position = Vector2(600, 1100)
+scale = Vector2(1, 1)
+
+[node name="BottomRight" type="Node2D" parent="."]
+position = Vector2(180, 115)
+scale = Vector2(0.5, 0.5)
+
+[node name="Crate13" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 800)
+scale = Vector2(1, 1)
+
+[node name="Crate14" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 900)
+scale = Vector2(1, 1)
+
+[node name="Crate15" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 1000)
+scale = Vector2(1, 1)
+
+[node name="Crate16" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(2104, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate29" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1954, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate30" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1804, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate31" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1654, 1100)
+scale = Vector2(1, 1)
+
+[node name="Crate32" parent="BottomRight" instance=ExtResource("1_uk5mo")]
+position = Vector2(1504, 1100)
+scale = Vector2(1, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -110,5 +148,5 @@ position = Vector2(350, 20)
 shape = SubResource("RectangleShape2D_jgva7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(802, 20)
+position = Vector2(932, 20)
 shape = SubResource("RectangleShape2D_jgva7")

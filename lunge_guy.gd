@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var SCREEN_WIDTH = 1152
-@onready var SCREEN_HEIGHT = 648
+@onready var SCREEN_WIDTH = get_viewport().get_visible_rect().size.x;
+@onready var SCREEN_HEIGHT = get_viewport().get_visible_rect().size.y;
 
 @export var speed: float = 40;
 @export var health: float = 10;

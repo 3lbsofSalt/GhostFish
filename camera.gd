@@ -1,7 +1,7 @@
 extends Camera2D
 
-const SCREEN_WIDTH = 1152;
-const SCREEN_HEIGHT = 648;
+@onready var SCREEN_WIDTH = get_viewport().get_visible_rect().size.x;
+@onready var SCREEN_HEIGHT = get_viewport().get_visible_rect().size.y;
 const PAN_TIME = 0.25;
 
 var current_frame_num = Vector2(0,0)
@@ -25,7 +25,7 @@ func player_in_ship() -> bool:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	playerPosition = playerFish.getPosition();
-	var new_frame_num = Vector2(int(playerPosition.x) / SCREEN_WIDTH, int(playerPosition.y) / SCREEN_HEIGHT)
+	var new_frame_num = Vector2(int(playerPosition.x / SCREEN_WIDTH), int(playerPosition.y / SCREEN_HEIGHT))
 	if (new_frame_num != current_frame_num):
 		current_frame_num = new_frame_num;
 		var panTween = create_tween();

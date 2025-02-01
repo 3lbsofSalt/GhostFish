@@ -27,13 +27,13 @@ border_width_bottom = 1
 script = ExtResource("1_f2t36")
 
 [node name="PlayerBody2D" parent="." instance=ExtResource("1_s4bfd")]
-position = Vector2(4032, 5500)
+position = Vector2(4480, 6120)
 
 [node name="BasicGhost" parent="." instance=ExtResource("2_avy68")]
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(3456, 5184)
+position = Vector2(3840, 5760)
 anchor_mode = 0
 script = ExtResource("3_nlxba")
 
