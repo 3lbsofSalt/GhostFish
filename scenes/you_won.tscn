@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyralcnkxb4yn" path="res://Assets/exit.png" id="4_m6a1v"]
 [ext_resource type="Script" path="res://restart_button.gd" id="5_dlip8"]
 [ext_resource type="Texture2D" uid="uid://cwvqm7olf25hd" path="res://Assets/restart.png" id="6_kjyll"]
-[ext_resource type="AudioStream" uid="uid://dccq7nx36fnm4" path="res://sounds/victory.mp3" id="7_l13au"]
+[ext_resource type="AudioStream" uid="uid://cd4joswp40xjf" path="res://sounds/victory.mp3" id="7_l13au"]
 [ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="8_jquyr"]
 [ext_resource type="Script" path="res://final_score.gd" id="10_h6e5d"]
 
@@ -34,13 +34,12 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(575, 204)
+position = Vector2(640, 204)
 texture = ExtResource("1_btjtj")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(575, 322)
-scale = Vector2(1.7811, 1.45707)
 texture = ExtResource("2_qj8c2")
+centered = false
 
 [node name="exitgamebutton" type="Button" parent="."]
 layout_mode = 1
@@ -50,9 +49,9 @@ anchor_top = 0.793
 anchor_right = 0.566
 anchor_bottom = 0.91
 offset_left = -0.143982
-offset_top = 0.135986
+offset_top = -40.96
 offset_right = -0.0320435
-offset_bottom = 0.320007
+offset_bottom = -40.7759
 script = ExtResource("3_5qvd1")
 
 [node name="Sprite2D" type="Sprite2D" parent="exitgamebutton"]
@@ -68,10 +67,10 @@ anchor_left = 0.422
 anchor_top = 0.636
 anchor_right = 0.566
 anchor_bottom = 0.753
-offset_left = -0.144012
-offset_top = -0.128021
+offset_left = -0.143982
+offset_top = -27.92
 offset_right = -0.0320435
-offset_bottom = 0.0559998
+offset_bottom = -27.736
 script = ExtResource("5_dlip8")
 
 [node name="Sprite2D" type="Sprite2D" parent="restartbutton"]
@@ -84,7 +83,7 @@ stream = ExtResource("7_l13au")
 autoplay = true
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(509, 324)
+position = Vector2(530, 324)
 scale = Vector2(0.641551, 0.632482)
 texture = ExtResource("8_jquyr")
 

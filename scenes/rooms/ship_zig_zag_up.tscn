@@ -14,46 +14,57 @@ centered = false
 [node name="Fog" parent="." instance=ExtResource("2_k8w2e")]
 position = Vector2(0, 0)
 
-[node name="Crate8" parent="." instance=ExtResource("3_0ac3i")]
+[node name="LeftStick" type="Node2D" parent="."]
+
+[node name="Crate" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 100)
+
+[node name="Crate2" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 150)
+
+[node name="Crate3" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 200)
+
+[node name="Crate4" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 250)
+
+[node name="Crate5" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 300)
+
+[node name="Crate6" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 350)
+
+[node name="Crate7" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 400)
+
+[node name="Crate8" parent="LeftStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(350, 450)
+
+[node name="RightStick" type="Node2D" parent="."]
+position = Vector2(130, 65)
+
+[node name="Crate15" parent="RightStick" instance=ExtResource("3_0ac3i")]
+position = Vector2(802, 200)
+
+[node name="Crate8" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 250)
 
-[node name="Crate9" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate9" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 300)
 
-[node name="Crate10" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate10" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 350)
 
-[node name="Crate11" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate11" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 400)
 
-[node name="Crate12" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate12" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 450)
 
-[node name="Crate13" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate13" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 500)
 
-[node name="Crate14" parent="." instance=ExtResource("3_0ac3i")]
+[node name="Crate14" parent="RightStick" instance=ExtResource("3_0ac3i")]
 position = Vector2(802, 550)
 
 [node name="CrateWall" parent="." instance=ExtResource("3_ffmbr")]
-
-[node name="Crate" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 100)
-
-[node name="Crate2" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 150)
-
-[node name="Crate3" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 200)
-
-[node name="Crate4" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 250)
-
-[node name="Crate5" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 300)
-
-[node name="Crate6" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 350)
-
-[node name="Crate7" parent="." instance=ExtResource("3_0ac3i")]
-position = Vector2(350, 400)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq46fgcitu5ol"]
+[gd_scene load_steps=6 format=3 uid="uid://bq46fgcitu5ol"]
 
 [ext_resource type="Texture2D" uid="uid://bdr6hnlwnbped" path="res://Assets/diagWood.png" id="1_h014q"]
 [ext_resource type="PackedScene" uid="uid://cnoxhliavei67" path="res://scenes/fog.tscn" id="2_63alv"]
 [ext_resource type="PackedScene" uid="uid://btifpkofa1gj0" path="res://scenes/crate_wall.tscn" id="3_3xxur"]
 [ext_resource type="PackedScene" uid="uid://coo751sus8061" path="res://scenes/crate.tscn" id="4_qw3gu"]
+[ext_resource type="PackedScene" uid="uid://bdlnsugt6r6q5" path="res://scenes/barrel_block_sideways.tscn" id="5_083r5"]
 
 [node name="ShipDivideUpRight" type="Sprite2D"]
 self_modulate = Color(0.423529, 0.439216, 0.454902, 1)
@@ -14,51 +15,50 @@ centered = false
 [node name="Fog" parent="." instance=ExtResource("2_63alv")]
 position = Vector2(0, 0)
 
-[node name="Crate" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 300)
-
-[node name="Crate2" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 350)
-
-[node name="Crate3" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 400)
-
-[node name="Crate4" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 450)
-
-[node name="Crate5" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 500)
-
-[node name="Crate6" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(350, 550)
-
 [node name="CrateWall" parent="." instance=ExtResource("3_3xxur")]
 
-[node name="Crate7" parent="." instance=ExtResource("4_qw3gu")]
+[node name="LeftVert" type="Node2D" parent="."]
 
-[node name="Crate8" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(575, 300)
+[node name="Crate" parent="LeftVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(932, 100)
 
-[node name="Crate9" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(650, 300)
+[node name="Crate2" parent="LeftVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(932, 150)
 
-[node name="Crate10" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(725, 300)
+[node name="Crate3" parent="LeftVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(932, 200)
 
-[node name="Crate15" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(802, 100)
+[node name="Crate4" parent="LeftVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(932, 250)
 
-[node name="Crate14" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(802, 150)
+[node name="Crate5" parent="LeftVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(932, 300)
 
-[node name="Crate13" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(802, 200)
+[node name="MiddleHoriz" type="Node2D" parent="."]
 
-[node name="Crate12" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(802, 250)
+[node name="BarrelBlockSideways" parent="MiddleHoriz" instance=ExtResource("5_083r5")]
+position = Vector2(640, 310)
 
-[node name="Crate11" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(802, 300)
+[node name="RightVert" type="Node2D" parent="."]
+position = Vector2(0, 15)
 
-[node name="Crate16" parent="." instance=ExtResource("4_qw3gu")]
-position = Vector2(425, 300)
+[node name="Crate11" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 300)
+
+[node name="Crate12" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 350)
+
+[node name="Crate13" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 400)
+
+[node name="Crate14" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 450)
+
+[node name="Crate15" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 500)
+
+[node name="Crate16" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 550)
+
+[node name="Crate17" parent="RightVert" instance=ExtResource("4_qw3gu")]
+position = Vector2(350, 600)

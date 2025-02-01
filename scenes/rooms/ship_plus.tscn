@@ -16,17 +16,32 @@ position = Vector2(0, 0)
 
 [node name="CrateWall" parent="." instance=ExtResource("3_btkk7")]
 
-[node name="Crate" parent="." instance=ExtResource("4_vvf7c")]
-position = Vector2(576, 274)
+[node name="Plus" type="Node2D" parent="."]
+position = Vector2(640, 350)
 
-[node name="Crate2" parent="." instance=ExtResource("4_vvf7c")]
-position = Vector2(576, 324)
+[node name="Crate6" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(0, -100)
 
-[node name="Crate3" parent="." instance=ExtResource("4_vvf7c")]
-position = Vector2(576, 374)
+[node name="Crate4" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(0, -50)
 
-[node name="Crate4" parent="." instance=ExtResource("4_vvf7c")]
-position = Vector2(501, 324)
+[node name="Crate" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(-75, 0)
 
-[node name="Crate5" parent="." instance=ExtResource("4_vvf7c")]
-position = Vector2(651, 324)
+[node name="Crate7" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(-150, 0)
+
+[node name="Crate2" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(0, 0)
+
+[node name="Crate3" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(75, 0)
+
+[node name="Crate8" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(150, 0)
+
+[node name="Crate5" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(0, 50)
+
+[node name="Crate9" parent="Plus" instance=ExtResource("4_vvf7c")]
+position = Vector2(0, 100)

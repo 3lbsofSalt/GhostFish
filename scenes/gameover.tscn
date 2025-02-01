@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://progress_bar.gd" id="8_ek65u"]
 [ext_resource type="Texture2D" uid="uid://c3g5uf68xhimx" path="res://Assets/score.png" id="9_oewjf"]
 [ext_resource type="Script" path="res://final_score.gd" id="10_kfncl"]
-[ext_resource type="AudioStream" uid="uid://ck71rfyys7fsp" path="res://sounds/game_over.mp3" id="11_7q3p3"]
+[ext_resource type="AudioStream" uid="uid://dv0cvxyb0hupe" path="res://sounds/game_over.mp3" id="11_7q3p3"]
 
 [sub_resource type="GDScript" id="GDScript_ivmq5"]
 script/source = "extends Sprite2D
@@ -41,10 +41,10 @@ anchor_left = 0.422
 anchor_top = 0.636
 anchor_right = 0.566
 anchor_bottom = 0.753
-offset_left = -0.144012
-offset_top = -0.128021
+offset_left = -0.143982
+offset_top = -27.92
 offset_right = -0.0320435
-offset_bottom = 0.0559998
+offset_bottom = -27.736
 script = ExtResource("1_50rhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="restartbutton"]
@@ -53,20 +53,19 @@ scale = Vector2(0.193089, 0.264045)
 texture = ExtResource("2_ijl47")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(588, 162)
+position = Vector2(640, 180)
 scale = Vector2(1.18217, 1.3427)
 texture = ExtResource("2_l2mtx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(573, 344)
+position = Vector2(640, 380)
 scale = Vector2(0.359867, 0.379213)
 texture = ExtResource("3_e6cfv")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(579.75, 321.5)
-scale = Vector2(1.79238, 1.45928)
 texture = ExtResource("5_0qo61")
+centered = false
 
 [node name="exitgamebutton" type="Button" parent="."]
 layout_mode = 1
@@ -76,9 +75,9 @@ anchor_top = 0.793
 anchor_right = 0.566
 anchor_bottom = 0.91
 offset_left = -0.143982
-offset_top = 0.135986
+offset_top = -40.96
 offset_right = -0.0320435
-offset_bottom = 0.320007
+offset_bottom = -40.7759
 script = ExtResource("1_q5lua")
 
 [node name="Sprite2D" type="Sprite2D" parent="exitgamebutton"]
@@ -102,7 +101,7 @@ fill_mode = 1
 script = ExtResource("8_ek65u")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(447, 269)
+position = Vector2(515, 300)
 scale = Vector2(0.641551, 0.632482)
 texture = ExtResource("9_oewjf")
 

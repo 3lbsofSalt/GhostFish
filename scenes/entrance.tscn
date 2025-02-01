@@ -173,14 +173,15 @@ position = Vector2(1275, 389.083)
 shape = SubResource("RectangleShape2D_vgnyt")
 
 [node name="Ship" type="Sprite2D" parent="."]
-position = Vector2(590, 158)
+position = Vector2(630, 200)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_i7viv")
 
 [node name="Fog" parent="." instance=ExtResource("3_f44na")]
 position = Vector2(0, 0)
 
 [node name="AnimatedArrow" type="AnimatedSprite2D" parent="."]
-position = Vector2(575, 28)
+position = Vector2(640, 28)
 rotation = -1.5708
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_gqvtd")

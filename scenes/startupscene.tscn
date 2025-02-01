@@ -52,7 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(579, 187)
+position = Vector2(640, 187)
 scale = Vector2(0.849788, 1.04038)
 texture = ExtResource("3_116kk")
 
@@ -63,17 +63,17 @@ centered = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 999
-position = Vector2(569, 323)
+position = Vector2(640, 335)
 scale = Vector2(3.04668, 2.91399)
 sprite_frames = SubResource("SpriteFrames_31ga5")
 script = ExtResource("6_nwjjt")
 
 [node name="easymode" type="Button" parent="."]
 layout_mode = 0
-offset_left = 193.0
-offset_top = 438.0
-offset_right = 716.0
-offset_bottom = 583.0
+offset_left = 250.0
+offset_top = 460.0
+offset_right = 850.0
+offset_bottom = 605.0
 scale = Vector2(0.559696, 0.833706)
 theme_override_font_sizes/font_size = 100
 text = "Easy Mode"
@@ -81,10 +81,10 @@ script = ExtResource("5_h8y6v")
 
 [node name="hardmode" type="Button" parent="."]
 layout_mode = 0
-offset_left = 657.0
-offset_top = 436.0
-offset_right = 1203.0
-offset_bottom = 581.0
+offset_left = 700.0
+offset_top = 460.0
+offset_right = 1300.0
+offset_bottom = 605.0
 scale = Vector2(0.54268, 0.826627)
 theme_override_font_sizes/font_size = 100
 text = "Hard Mode"

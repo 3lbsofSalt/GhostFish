@@ -26,7 +26,7 @@ position = Vector2(475, 475)
 position = Vector2(650, 400)
 
 [node name="Crate4" parent="." instance=ExtResource("4_kt2pq")]
-position = Vector2(850, 450)
+position = Vector2(757, 550)
 
 [node name="Crate5" parent="." instance=ExtResource("4_kt2pq")]
 position = Vector2(425, 300)
@@ -41,7 +41,13 @@ position = Vector2(625, 250)
 position = Vector2(775, 200)
 
 [node name="Crate9" parent="." instance=ExtResource("4_kt2pq")]
-position = Vector2(930, 325)
+position = Vector2(850, 377)
 
 [node name="Crate10" parent="." instance=ExtResource("4_kt2pq")]
 position = Vector2(215, 425)
+
+[node name="Crate11" parent="." instance=ExtResource("4_kt2pq")]
+position = Vector2(989, 263)
+
+[node name="Crate12" parent="." instance=ExtResource("4_kt2pq")]
+position = Vector2(1067, 484)
