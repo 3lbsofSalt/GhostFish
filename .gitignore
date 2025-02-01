@@ -8,3 +8,4 @@ mouth_open.txt
 *.pck
 *.x86_64
 *.cfg
+*.vscode*
