@@ -8,8 +8,6 @@ mouth_open.txt
 *.pck
 *.x86_64
 *.cfg
-<<<<<<< Updated upstream
 *.vscode*
-=======
 launch.json
->>>>>>> Stashed changes
+venv_installed.txt

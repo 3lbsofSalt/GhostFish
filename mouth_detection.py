@@ -1,55 +1,50 @@
-# #!/home/isaacp/repos/GhostFish/env/bin/python3
-# import os
-# import sys
-# import subprocess
-# import venv
-# from pathlib import Path
+import os
+import sys
+import subprocess
+import venv
+from pathlib import Path
 
-# # List of required packages
-# REQUIRED_PACKAGES = ["numpy", "pandas", "mediapipe"]  # Modify as needed
-# VENV_DIR = "env"  # Change this if you want a different venv name
+# List of required packages
+REQUIRED_PACKAGES = ["numpy", "pandas", "mediapipe"]  # Modify as needed
+VENV_DIR = "env"  # Change this if you want a different venv name
 
-# def create_virtualenv():
-# 	"""Create a virtual environment and install required packages."""
-# 	print(f"Creating virtual environment in {VENV_DIR}...")
-# 	venv.create(VENV_DIR, with_pip=True)
+def create_virtualenv():
+	"""Create a virtual environment and install required packages."""
+	print(f"Creating virtual environment in {VENV_DIR}...")
+	venv.create(VENV_DIR, with_pip=True)
 
-# 	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")
+	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")
 
-# 	print("Installing required packages...")
-# 	subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip"])
-# 	subprocess.check_call([python_executable, "-m", "pip", "install"] + REQUIRED_PACKAGES)
+	print("Installing required packages...")
+	subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip"])
+	subprocess.check_call([python_executable, "-m", "pip", "install"] + REQUIRED_PACKAGES)
 
-# 	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")	
-# 	subprocess.run([python_executable, "./mouth_detection.py"])
-# 	sys.exit()
+	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")	
+	subprocess.run([python_executable, "./mouth_detection.py"])
+	sys.exit()
 
-# def run_in_venv():
-# 	"""Restart script inside the virtual environment."""
-# 	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")
+def run_in_venv():
+	"""Restart script inside the virtual environment."""
+	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")
 
-# 	print(f"Restarting script inside virtual environment ({VENV_DIR})...")
-# 	subprocess.check_call([python_executable, *sys.argv])
-# 	sys.exit()  # Exit original script after restarting
+	print(f"Restarting script inside virtual environment ({VENV_DIR})...")
+	subprocess.check_call([python_executable, *sys.argv])
+	sys.exit()  # Exit original script after restarting
 
-# if not Path(VENV_DIR).exists():
-# 	create_virtualenv()
-# 	run_in_venv()
+if not Path(VENV_DIR).exists():
+	create_virtualenv()
+	run_in_venv()
 
-# try:
-# 	import cv2
-# 	import mediapipe as mp
-# 	import numpy as np
-# except:
-# 	# Step 4: Main script logic (runs inside venv)
-# 	print("Running script with all dependencies installed!")
-# 	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")	
-# 	subprocess.run([python_executable, "./mouth_detection.py"])
-# 	sys.exit()
-
-import cv2
-import mediapipe as mp
-import numpy as np
+try:
+	import cv2
+	import mediapipe as mp
+	import numpy as np
+except:
+	# Step 4: Main script logic (runs inside venv)
+	print("Running script with all dependencies installed!")
+	python_executable = os.path.join(VENV_DIR, "bin", "python") if os.name != "nt" else os.path.join(VENV_DIR, "Scripts", "python.exe")	
+	subprocess.run([python_executable, "./mouth_detection.py"])
+	sys.exit()
 
 # Initialize Mediapipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh

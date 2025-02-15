@@ -8,18 +8,16 @@ func _ready():
 	# setup the python env if it doesnt exist
 	#python_process_id = OS.execute("./setup.sh", [""])
 	# Run the Python script
+	var file = FileAccess.open(mouth_state_file_path, FileAccess.WRITE)
+	file.store_string("")
+	
 	print(OS.get_name())
-	if OS.get_name() == 'X11' or OS.get_name() == 'Linux':
-		python_process_id = OS.execute("env/bin/python", ["mouth_detection.py"])
-	else:
-		python_process_id = OS.execute("env\\Scripts\\python.exe", ["mouth_detection.py"])
+	python_process_id = OS.execute("python", ["mouth_detection.py"])
 	print("Python script started with process ID: ", python_process_id, OS.get_name())
-
-	# Check if the file exists
-	if !FileAccess.file_exists(mouth_state_file_path):
-		var file = FileAccess.open(mouth_state_file_path, FileAccess.WRITE)
-		file.store_string("closed")
-		file.close()
+	
+	file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
+	while file.get_as_text() == "":
+		file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
 		
 	# Start checking the file for updates
 	set_process(true)
@@ -41,3 +39,10 @@ func _exit_tree():
 	if python_process_id != null:
 		OS.kill(python_process_id)
 		print("Python process terminated")
+	# Create an instance of the File class
+	var file = FileAccess.open(mouth_state_file_path, FileAccess.READ)
+	if file:
+		DirAccess.remove_absolute(file.get_path_absolute())
+		
+		
+	
