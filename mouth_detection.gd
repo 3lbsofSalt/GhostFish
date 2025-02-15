@@ -30,11 +30,12 @@ func _process(delta):
 	if file:
 		var mouth_state = file.get_as_text()
 		file.close()
-
+		
+		var space_pressed = Input.is_action_pressed("use")
 		# Example: Use mouth state in the game
-		if mouth_state == "yes":
+		if mouth_state == "yes" or space_pressed:
 			mouth_open = true;
-		elif mouth_state == "no":
+		elif mouth_state == "no" or not space_pressed:
 			mouth_open = false;
 
 func _exit_tree():
